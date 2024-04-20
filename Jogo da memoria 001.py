@@ -7,30 +7,34 @@ def limpa_tela():
     ERASE = "\x1b[2K"
     print((MOVE_CURSOR_UP + ERASE)*2,end="")
     print('\n'*50)
-#printa matri na tela  
-def printa_matris():
-    print(matriz[0]["card"],matriz[1]["card"], matriz[2]["card"])
-    print(matriz[3]["card"],matriz[4]["card"], matriz[5]["card"])
-    print(matriz[6]["card"],matriz[7]["card"], matriz[8]["card"])
+#printa matriz na tela  
+def printa_matriz():
+    print(matriz[0]["card"],matriz[1]["card"], matriz[2]["card"],matriz[3]["card"])
+    print(matriz[4]["card"], matriz[5]["card"],matriz[6]["card"],matriz[7]["card"])
+    #print(matriz[8]["card"],matriz[9]["card"],matriz[10]["card"],matriz[11]["card"])
     print ('') 
-   
+
+
+#Menu game instruções  
 print('\n'*50)
 print ('------------------------------------')
 print ('C = Linguagem C, P = Python, R = Rust, J = Java, K = Korlin * = BOMB!')
 print ('')
 
+
+
+#Define Matriz
 matriz = []
-##card2 = dict()
-card0 = {"card":1,"linguagem":"*"}
-card1 = {"card":2,"linguagem":"*"}
+
+card0 = {"card":1,"linguagem":"J"}
+card1 = {"card":2,"linguagem":"J"}
 card2 = {"card":3,"linguagem":'P'}
 card3 = {"card":4,"linguagem":"R"}
 card4 = {"card":5,"linguagem":"R"}
 card5 = {"card":6,"linguagem":"P"}
 card6 = {"card":7,"linguagem":"J"}
 card7 = {"card":8,"linguagem":"K"}
-card8 = {"card":9,"linguagem":"K"}
-card9 = {"card":10,"linguagem":"J"}
+
 matriz.append(card0)
 matriz.append(card1)
 matriz.append(card2)
@@ -39,20 +43,22 @@ matriz.append(card4)
 matriz.append(card5)
 matriz.append(card6)
 matriz.append(card7)
-matriz.append(card8)
-matriz.append(card9)
 
 
-printa_matris()
 
+
+printa_matriz()
+
+
+# MENU DE IMPUT de CARTA
 carta_1 = input("Escolha PRIMEIRA carta: ")
-# print (carta_1)
+print (carta_1)
 carta_1_em_int = int(carta_1)
-carta_2_em_int = carta_1_em_int-1
+carta_1_em_int = carta_1_em_int-1
 print ('')
 print (carta_1_em_int)
 print ('')
-print (matriz[carta_1_em_int]["linguagem"])
+print ("carta", carta_1_em_int+1, "é:",  matriz[carta_1_em_int]["linguagem"])
 print ('')
 
 
@@ -63,10 +69,11 @@ carta_2_em_int = carta_2_em_int-1
 print ('')
 print (carta_2_em_int)
 print ('')
-print (matriz[carta_2_em_int]["linguagem"])
+print ("carta", carta_2_em_int+1, "é:", matriz[carta_2_em_int]["linguagem"])
 print ('')
-resultado1 = matriz[carta_1_em_int]["linguagem"]
 
+#print Resultado de comparação
+resultado1 = matriz[carta_1_em_int]["linguagem"]
 resultado2 = matriz[carta_2_em_int]["linguagem"]
 
 str(resultado1)
@@ -87,11 +94,11 @@ else:
     print (' ---------------------------------')
 
   
-time.sleep(4)
+#time.sleep(40)
 
-limpa_tela()
-print ('tempo sleep passou!')
-time.sleep(4)
+#limpa_tela()
+#print ('tempo sleep passou!')
+#time.sleep(4)
 
 
     
