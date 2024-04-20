@@ -1,6 +1,6 @@
 
 import time
-
+numeros_de_cartas = 8
 #funcção de limpar tela
 def limpa_tela():
     MOVE_CURSOR_UP = "\033[1A"
@@ -52,24 +52,31 @@ while True:
 
 
     # MENU DE IMPUT de CARTA
-    carta_1 = input("Escolha PRIMEIRA carta: ")
-    print (carta_1)
+    carta_1 = input("Escolha da PRIMEIRA carta: ")
+    if int(carta_1) > numeros_de_cartas:
+        print ('Favor digitar o número de uma das 8 cartas!')
+        ('------------------------')
+        carta_1 = input("Escolha PRIMEIRA carta: ")
     carta_1_em_int = int(carta_1)
     carta_1_em_int = carta_1_em_int-1
     print ('')
-    print (carta_1_em_int)
-    print ('')
+    
+    
     print ("carta", carta_1_em_int+1, "é:",  matriz[carta_1_em_int]["linguagem"])
     print ('')
+    print ("numero da carta na memoria: ",carta_1_em_int)
 
 
-    carta_2 = input("Escolha SEGUNDA carta: ")
-
+    carta_2 = input("Escolha da SEGUNDA carta: ")
+    if int(carta_2) > numeros_de_cartas:
+        print ('Favor digitar o número de uma das 8 cartas!')
+        ('------------------------')
+        carta_2 = input("Escolha SEGUNDA carta: ")
     carta_2_em_int = int(carta_2)
     carta_2_em_int = carta_2_em_int-1
     print ('')
-    print (carta_2_em_int)
-    print ('')
+    #print (carta_2_em_int)
+    #print ('')
     print ("carta", carta_2_em_int+1, "é:", matriz[carta_2_em_int]["linguagem"])
     print ('')
 
@@ -84,6 +91,10 @@ while True:
 
 
     if  resultado1 == resultado2:
+        #Substitui o numero pelo nome da carta
+        matriz[carta_1_em_int]["card"] = matriz[carta_1_em_int]["linguagem"]
+        matriz[carta_2_em_int]["card"] = matriz[carta_2_em_int]["linguagem"]
+        #5
         print ('Parabéns, você ACERTOU!')
         print ('')
         #print ('Escolha novas cartas') 
