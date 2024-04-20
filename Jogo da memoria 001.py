@@ -1,5 +1,18 @@
+
+import time
+
+#funcção de limpar tela
+def limpa_tela():
+    MOVE_CURSOR_UP = "\033[1A"
+    ERASE = "\x1b[2K"
+    print((MOVE_CURSOR_UP + ERASE)*2,end="")
+    print('\n'*50)
+    
+print('\n'*50)
+print ('------------------------------------')
 print ('C = Linguagem C, P = Python, R = Rust, J = Java, K = Korlin * = BOMB!')
 print ('')
+
 matriz = []
 ##card2 = dict()
 card0 = {"card":1,"linguagem":"*"}
@@ -22,6 +35,8 @@ matriz.append(card6)
 matriz.append(card7)
 matriz.append(card8)
 matriz.append(card9)
+
+print("printa matrix a baixo")
 print(matriz[0]["card"],matriz[1]["card"], matriz[2]["card"])
 print(matriz[3]["card"],matriz[4]["card"], matriz[5]["card"])
 print(matriz[6]["card"],matriz[7]["card"], matriz[8]["card"])
@@ -68,5 +83,10 @@ else:
     print (' ---------------------------------')
 
   
-#sleep(1)
+time.sleep(4)
+limpa_tela()
+print ('tempo sleep passou!')
+time.sleep(4)
 
+
+    
