@@ -7,7 +7,13 @@ def limpa_tela():
     ERASE = "\x1b[2K"
     print((MOVE_CURSOR_UP + ERASE)*2,end="")
     print('\n'*50)
-    
+#printa matri na tela  
+def printa_matris():
+    print(matriz[0]["card"],matriz[1]["card"], matriz[2]["card"])
+    print(matriz[3]["card"],matriz[4]["card"], matriz[5]["card"])
+    print(matriz[6]["card"],matriz[7]["card"], matriz[8]["card"])
+    print ('') 
+   
 print('\n'*50)
 print ('------------------------------------')
 print ('C = Linguagem C, P = Python, R = Rust, J = Java, K = Korlin * = BOMB!')
@@ -36,11 +42,9 @@ matriz.append(card7)
 matriz.append(card8)
 matriz.append(card9)
 
-print("printa matrix a baixo")
-print(matriz[0]["card"],matriz[1]["card"], matriz[2]["card"])
-print(matriz[3]["card"],matriz[4]["card"], matriz[5]["card"])
-print(matriz[6]["card"],matriz[7]["card"], matriz[8]["card"])
-print ('')
+
+printa_matris()
+
 carta_1 = input("Escolha PRIMEIRA carta: ")
 # print (carta_1)
 carta_1_em_int = int(carta_1)
@@ -84,6 +88,7 @@ else:
 
   
 time.sleep(4)
+
 limpa_tela()
 print ('tempo sleep passou!')
 time.sleep(4)
