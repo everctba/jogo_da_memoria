@@ -1,4 +1,5 @@
 
+import random 
 import time
 numeros_de_cartas = 8
 #funcção de limpar tela
@@ -26,6 +27,22 @@ def menu_instrucoes():
 
 #Define Matriz
 matriz = []
+#Cartas aleatórias
+
+posiveis_cartas = ["J","J","P","R","P","R","K","K"]
+  
+while len(posiveis_cartas) > 0:
+    tamanho_lista_atual = len(posiveis_cartas)
+    print (' ')
+    # pega um numero aleatório
+    carta_aleatoria = random.choice(posiveis_cartas)
+    print ('carta_aleatoria:', carta_aleatoria)
+    print (' ')
+    print ('tamanho_lista_atual: ',tamanho_lista_atual)
+    carta_selecionada = carta_aleatoria
+    posiveis_cartas.remove(carta_aleatoria)
+    print ('Lista menos item:', posiveis_cartas)
+    time.sleep(0.5)
 
 card0 = {"card":1,"linguagem":"J"}
 card1 = {"card":2,"linguagem":"J"}
