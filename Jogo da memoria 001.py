@@ -27,31 +27,39 @@ def menu_instrucoes():
 
 #Define Matriz
 matriz = []
-#Cartas aleatórias
 
+#Cartas aleatórias
 posiveis_cartas = ["J","J","P","R","P","R","K","K"]
-  
+lista_de_cartas_aletorias = []
+
 while len(posiveis_cartas) > 0:
+
     tamanho_lista_atual = len(posiveis_cartas)
     print (' ')
     # pega um numero aleatório
     carta_aleatoria = random.choice(posiveis_cartas)
+    # ADiciona card aleatorio a lista aleatoria
+    lista_de_cartas_aletorias.append(carta_aleatoria)
     print ('carta_aleatoria:', carta_aleatoria)
     print (' ')
     print ('tamanho_lista_atual: ',tamanho_lista_atual)
     carta_selecionada = carta_aleatoria
+    
+    #Remove uma carta da lista
     posiveis_cartas.remove(carta_aleatoria)
     print ('Lista menos item:', posiveis_cartas)
     time.sleep(0.5)
-
-card0 = {"card":1,"linguagem":"J"}
-card1 = {"card":2,"linguagem":"J"}
-card2 = {"card":3,"linguagem":'P'}
-card3 = {"card":4,"linguagem":"R"}
-card4 = {"card":5,"linguagem":"R"}
-card5 = {"card":6,"linguagem":"P"}
-card6 = {"card":7,"linguagem":"K"}
-card7 = {"card":8,"linguagem":"K"}
+print ('--------------------')
+print ('Lista distribuida aleatoriamente:', lista_de_cartas_aletorias)
+print ('--------------------')
+card0 = {"card":1,"linguagem":lista_de_cartas_aletorias[0]}
+card1 = {"card":2,"linguagem":lista_de_cartas_aletorias[1]}
+card2 = {"card":3,"linguagem":lista_de_cartas_aletorias[2]}
+card3 = {"card":4,"linguagem":lista_de_cartas_aletorias[3]}
+card4 = {"card":5,"linguagem":lista_de_cartas_aletorias[4]}
+card5 = {"card":6,"linguagem":lista_de_cartas_aletorias[5]}
+card6 = {"card":7,"linguagem":lista_de_cartas_aletorias[6]}
+card7 = {"card":8,"linguagem":lista_de_cartas_aletorias[7]}
 
 matriz.append(card0)
 matriz.append(card1)
