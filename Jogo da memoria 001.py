@@ -1,7 +1,10 @@
 
 import random 
 import time
+continuar_jogando = True
+
 numeros_de_cartas = 8
+contador_de_game_terminado = 0
 #funcção de limpar tela
 def limpa_tela():
     MOVE_CURSOR_UP = "\033[1A"
@@ -19,7 +22,7 @@ def menu_instrucoes():
     #Menu game instruções  
     print('\n'*50)
     print ('------------------------------------')
-    print ('C = Linguagem C, P = Python, R = Rust, J = Java, K = Korlin')
+    print (' P = Python, R = Rust, J = Java, K = Korlin')
     print ('')
 
 
@@ -71,7 +74,15 @@ matriz.append(card6)
 matriz.append(card7)
 
 
-while True:
+while continuar_jogando:
+    # se o jogador acertou todas as cartas então fim de jogo:
+    if contador_de_game_terminado == 4:
+        print ('') 
+        limpa_tela()
+        print ('Parabéns Campeão, você VENCEU!') 
+        continuar_jogando = False
+        break
+    
     menu_instrucoes()
     printa_matriz()
 
@@ -89,7 +100,7 @@ while True:
     
     print ("carta", carta_1_em_int+1, "é:",  matriz[carta_1_em_int]["linguagem"])
     print ('')
-    print ("numero da carta na memoria: ",carta_1_em_int)
+    #print ("numero da carta na memoria: ",carta_1_em_int)
 
 
     carta_2 = input("Escolha da SEGUNDA carta: ")
@@ -116,6 +127,7 @@ while True:
 
 
     if  resultado1 == resultado2:
+        contador_de_game_terminado = contador_de_game_terminado+1
         #Substitui o numero pelo nome da carta
         matriz[carta_1_em_int]["card"] = matriz[carta_1_em_int]["linguagem"]
         matriz[carta_2_em_int]["card"] = matriz[carta_2_em_int]["linguagem"]
@@ -128,13 +140,17 @@ while True:
         print ('Você ERROU!')
         print (' ')
         print ('Tente novamente nesta próxima jogada') 
-        print (' ---------------------------------')
+        print ('')
 
     
-    time.sleep(4)
-
+    time.sleep(3)
+    
     limpa_tela()
     #print ('tempo sleep passou!')
     #time.sleep(4)
-
-
+limpa_tela() 
+   
+printa_matriz()
+print (' ')
+print ('Parabéns Campeão, você VENCEU!')
+print ("---------------------------------") 
