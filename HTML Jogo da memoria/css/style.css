@@ -4,11 +4,25 @@
    height: 100px;
 }
 
-body {
-   margin: 0px;
+@font-face {
+   font-family: font-round-bold;
+   src: url(../fonts/Helvetica_Rounded_LT_Black.ttf);
 }
 
-#div_block-3-6 {
+@font-face {
+   font-family: font-round-normal;
+   src: url(../fonts/Helvetica_Rounded_LT_Bold.ttf);
+}
+
+
+body {
+   margin: 0px;
+   font-family: 'font-round-normal';
+   color: #2a2a2a;
+
+}
+
+/* #div_fundo {
    justify-items: center;
    align-items: end;
    grid-template-columns: repeat(3, minmax(0px, 1fr));
@@ -27,13 +41,41 @@ body {
    padding-right: 26px;
    padding-top: 26px;
    padding-bottom: 26px;
+   /* teste fundo do figma */
+
+/* } */
+
+
+
+.rectangle-ceu,
+.rectangle-ceu * {
+   box-sizing: border-box;
 }
 
-#div_block-5-6 {
+.rectangle-ceu {
+   background: linear-gradient(13.35deg,
+         rgba(20, 185, 255, 1) 0%,
+         rgba(72, 224, 250, 1) 38.0013108253479%,
+         rgba(112, 255, 246, 1) 67.9948091506958%,
+         rgba(208, 255, 252, 1) 100%);
+   border-radius: 6px;
+   width: 261.21px;
+   height: 462.08px;
+   position: relative;
+   transform-origin: 0 0;
+   transform: rotate(0deg) scale(1, 1);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+
+/* #div_block-5-6 {
    width: 100px;
    background-color: #f44646;
    height: 100px;
-}
+} */
 
 .card-box {
    width: 100px;
@@ -48,6 +90,51 @@ body {
    border-bottom-width: 1px;
    border-left-width: 1px;
    background-color: #f44646;
+}
+
+.logo-menu-fonny {
+   transform: scale(0.5, 0.5);
+}
+
+.texto-menu-jogue {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-content: center;
+   text-align: center;
+   margin-top: 16px;
+   margin-bottom: 16px;
+   font-size: 22px;
+   line-height: 24px;
+}
+
+.botao-iniciar {
+   /* background: url(..\images\menu\comecar-botao.png) no-repeat; */
+
+   width: 63%;
+   background-color: #f44646;
+   height: 44px;
+   border-radius: 55px;
+   margin-top: 55px;
+   margin-bottom: 36px;
+   cursor: pointer;
+}
+
+.comecar-botao {
+   transition-duration: 1s;
+   transform: scale(0.5, 0.5);
+   cursor: pointer;
+}
+
+.comecar-botao:hover {
+   transform: scale(0.57, 0.57);
+   cursor: pointer;
+}
+
+.creditos {
+   display: flex;
+   font-size: 8px;
+   justify-content: center;
 }
 
 .a2 {
