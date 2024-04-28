@@ -94,7 +94,7 @@ while continuar_jogando:
         print ('Favor digitar o número de uma das 8 cartas!')
         ('------------------------')
         carta_1 = input("Escolha PRIMEIRA carta: ")
-    compara_com_carta_1=carta_19
+    compara_com_carta_1=carta_1
     carta_1_em_int = int(carta_1)
     carta_1_em_int = carta_1_em_int-1
     print ('')
