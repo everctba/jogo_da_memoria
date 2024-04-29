@@ -1,4 +1,5 @@
 const grid = document.querySelector(".grid");
+let a_carta = document.getElementsByClassName("frente-carta");
 
 const frutas = [
    'abacate',
@@ -21,6 +22,33 @@ const criaDiv = (tag, className) => {
    return element;
 }
 
+revelaCarta = ({ target }) => {
+   console.log(target);
+   
+   // let javirou = a_carta.className.("revela-carta");
+   console.log(a_carta);
+   if (target.classList == "verso-carta") {
+      console.log("VERSO");
+   }
+   if (a_carta.classList == ("frente-carta")) {
+      console.log("FRENTE");
+   }
+
+   target.classList.add('revela-carta');
+   // if (a_carta)
+   //    console.log("tem a carta!!!");
+   //    console.log(a_carta);
+   //    
+      
+   
+   // console.log(document.getElementsByClassName("verso-carta"));
+   // if (target.document.getElementsByClassName("verso-carta"));
+   // // if (a_carta.classList.contains('revela-carta')) {
+   //    a_carta.classList.replace('revela-carta', "");
+   // }
+
+}
+
 const createCard = (frente) => {
    const card = criaDiv('div','tamanho-carta');
    const front = criaDiv('div','card face verso-carta');
@@ -30,6 +58,9 @@ const createCard = (frente) => {
    card.appendChild(front);
    card.appendChild(back);
    grid.appendChild(card);
+
+   card.addEventListener('click', revelaCarta);
+
    return card;
 }
 

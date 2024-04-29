@@ -44,11 +44,21 @@ body {
    position: relative;
    transition: all 400ms ease;
    transform-style: preserve-3d;
+
 }
 
+.revela-carta {
+   transform: rotateY(140deg);
+}
+
+.desrevela-carta {
+   transform: rotateY(30deg);
+}
+
+/* 
 .card:hover {
    transform: rotateY(180deg);
-}
+} */
 
 .face {
    width: 150px;
@@ -61,6 +71,7 @@ body {
    height: 150px;
 }
 
+
 .frente-carta {
    background-image: url("../images/jogo_da_memoria/verso.jpg");
    background-size: cover;
@@ -68,12 +79,20 @@ body {
    backface-visibility: hidden;
 }
 
+/* .frente-carta:hover {
+   transform: rotateY(180deg);
+} */
+
 .verso-carta {
    background-image: url("../images/jogo_da_memoria/abacaxi.jpg");
    background-size: cover;
    background-position: center;
    backface-visibility: hidden;
 }
+
+/* .verso-carta:hover {
+   transform: rotateY(180deg);
+} */
 
 #div_block_fundo {
    background-color: #195e1d87;
