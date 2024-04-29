@@ -1,5 +1,6 @@
 const grid = document.querySelector(".grid");
 let a_carta = document.getElementsByClassName("frente-carta");
+let b_carta = [...document.getElementsByClassName("frente-carta")];
 
 const frutas = [
    'abacate',
@@ -21,12 +22,34 @@ const criaDiv = (tag, className) => {
    element.className = className;
    return element;
 }
+let primeiraCarta = '';
+let segundaCarta = '';
 
+const checar_Cartas = () => {
+   const primeiraFruta = primeiraCarta.getAttribute('data-fruta');
+   const segundaFruta = segundaCarta.getAttribute('data-fruta');
+   console.log(primeiraFruta);
+   if (primeiraFruta == segundaFruta){
+
+      console.log("sao iguais NANANAN");
+      
+   } else {
+      console.log("sao Diferentes");
+      setTimeout ( () => {
+         primeiraCarta.classList.remove('revela-carta');
+         segundaCarta.classList.remove('revela-carta');
+         primeiraCarta = '';
+         segundaCarta = '';
+      }, 500);
+   }
+}
 revelaCarta = ({ target }) => {
    console.log(target);
    
    // let javirou = a_carta.className.("revela-carta");
-   console.log(a_carta);
+   // console.log(a_carta);
+   // console.log(b_carta);
+  
    if (target.classList == "verso-carta") {
       console.log("VERSO");
    }
@@ -34,7 +57,23 @@ revelaCarta = ({ target }) => {
       console.log("FRENTE");
    }
 
-   target.classList.add('revela-carta');
+   if (primeiraCarta == ''){
+      target.classList.add('revela-carta');
+      primeiraCarta = target.parentNode;
+      console.log("PRIMEIRA CARTA VAZIA");
+   } else if (segundaCarta == ''){
+      target.classList.add('revela-carta');
+      segundaCarta = target.parentNode;
+      console.log("SEGUNDA CARTA VAZIA");
+   }
+
+   checar_Cartas();
+
+   // target.classList.add('revela-carta');
+
+
+
+
    // if (a_carta)
    //    console.log("tem a carta!!!");
    //    console.log(a_carta);
@@ -51,8 +90,8 @@ revelaCarta = ({ target }) => {
 
 const createCard = (frente) => {
    const card = criaDiv('div','tamanho-carta');
-   const front = criaDiv('div','card face verso-carta');
-   const back = criaDiv('div','card face frente-carta');
+   const front = criaDiv('div',' card face verso-carta');
+   const back = criaDiv('div', 'card face frente-carta');
 
    front.style.backgroundImage = `url("./images/jogo_da_memoria/${frente}.jpg")`;
    card.appendChild(front);
@@ -60,7 +99,7 @@ const createCard = (frente) => {
    grid.appendChild(card);
 
    card.addEventListener('click', revelaCarta);
-
+   card.setAttribute('data-frutas', frente);
    return card;
 }
 

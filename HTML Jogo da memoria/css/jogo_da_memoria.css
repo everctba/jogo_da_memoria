@@ -48,7 +48,7 @@ body {
 }
 
 .revela-carta {
-   transform: rotateY(140deg);
+   transform: rotateY(180deg);
 }
 
 .desrevela-carta {
@@ -69,6 +69,7 @@ body {
 .tamanho-carta {
    width: 150px;
    height: 150px;
+
 }
 
 
