@@ -59,8 +59,8 @@ body {
          rgba(112, 255, 246, 1) 67.9948091506958%,
          rgba(208, 255, 252, 1) 100%);
    border-radius: 6px;
-   width: 261.21px;
-   height: 462.08px;
+   /* width: 261.21px; */
+   height: 100vh;
    position: relative;
    transform-origin: 0 0;
    transform: rotate(0deg) scale(1, 1);
@@ -141,9 +141,9 @@ body {
 .a2 {
    height: 100vh;
    padding-top: 0;
-   padding-right: 0;
+   padding-right: 8px;
    padding-bottom: 0;
-   padding-left: 0;
+   padding-left: 8px;
    display: flex;
    margin-top: 32px;
 
