@@ -26,7 +26,7 @@ body {
 
 .grid {
    display: grid;
-   grid-template-columns: repeat(3, minmax(0px, 1fr));
+   grid-template-columns: repeat(3, minmax(auto, 1fr));
    gap: 16px;
    /* width: 100%;
    max-width: 550px; */
@@ -72,6 +72,11 @@ body {
 .tamanho-carta {
    /* width: 150px; */
    height: 95px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: row;
+   flex-wrap: nowrap;
 
 }
 
