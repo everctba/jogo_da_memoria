@@ -4,7 +4,7 @@ const grid = document.querySelector(".grid-abc");
 
 
 const abcCartas = [
-   'a'
+   'a',
    'b',
    'c',
    'd',
