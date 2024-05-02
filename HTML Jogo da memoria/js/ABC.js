@@ -64,10 +64,6 @@ const createCard = (frente) => {
 }
 
 
-
-
-
-
 const carregaCartas = () => {
    abcCartas.forEach((frente) => {
       const card = createCard(frente);
@@ -77,4 +73,7 @@ const carregaCartas = () => {
 }
 carregaCartas();
 createCard(abcCartas);
+
+
+
 console.log(grid);
