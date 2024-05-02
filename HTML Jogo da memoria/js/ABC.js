@@ -3,7 +3,7 @@ const grid = document.querySelector(".grid-abc");
 
 
 
-const frutas = [
+const abcCartas = [
    '0',
    '1',
    '2',
@@ -44,12 +44,12 @@ const createCard = (frente) => {
 
 
 const carregaCartas = () => {
-  frutas.forEach((frente) => {
+   abcCartas.forEach((frente) => {
       const card = createCard(frente);
       grid.appendChild(card);
    })   
    
 }
 carregaCartas();
-createCard(frutas);
+createCard(abcCartas);
 console.log(grid);
