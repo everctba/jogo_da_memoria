@@ -40,13 +40,15 @@ const checar_Cartas = (primeiraFruta, segundaFruta) => {
          b = segundaCarta.childNodes[0];
          a.style.transform = "scale(1.1)";
          b.style.transform = "scale(1.1)";
+         // a.style.backgroundImage = 'url("./images/jogo_da_memoria/ok.jpg")';
       setTimeout(() => {
          // style.primeiraFruta(transform: scale(1.1));
          // primeiraCarta.querySelectorAll();
          
          
          console.log("a = ", a);
-         a.style.backgroundImage = `url("./images/jogo_da_memoria/${ok}.jpg")`;
+         a.style.backgroundImage = `url("./images/jogo_da_memoria/ok.jpg")`;
+         b.style.backgroundImage = `url("./images/jogo_da_memoria/ok.jpg")`;
         
          // aumenta tamanho das cartas
          //toca som
@@ -55,6 +57,15 @@ const checar_Cartas = (primeiraFruta, segundaFruta) => {
         
          console.log("Delayed for 1 second.");
        }, 1000);
+
+       setTimeout(() => {
+         a.style.transform = "scale(1.0)";
+         b.style.transform = "scale(1.0)";
+         primeiraCarta = '';
+         segundaCarta = '';
+       },1100);
+       
+
       console.log("sao iguais PARABÉNS!");
 
 
