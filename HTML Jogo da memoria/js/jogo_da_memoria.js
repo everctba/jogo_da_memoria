@@ -24,50 +24,94 @@ const criaDiv = (tag, className) => {
 }
 let primeiraCarta = '';
 let segundaCarta = '';
+let primeiraFruta = '...';
+let segundaFruta = '...';
 
-const checar_Cartas = () => {
-   const primeiraFruta = primeiraCarta.getAttribute('data-fruta');
-   const segundaFruta = segundaCarta.getAttribute('data-fruta');
-   console.log(primeiraFruta);
-   if (primeiraFruta == segundaFruta){
+const checar_Cartas = (primeiraFruta, segundaFruta) => {
+   
+   console.log(" Dentro de checa carta = Pripeira fruta é ... ", primeiraFruta);
+   console.log(" Dentro de checa carta = Segunda fruta é ... ", segundaFruta);
+   console.log("primeiraCarta", primeiraCarta);
+   console.log("SegundaCarta", segundaCarta);
+   // let idCartaMatch = document.getElementsByClassName('primeiraFruta')
+   
+   if (primeiraFruta === segundaFruta){
+         a = primeiraCarta.childNodes[0];
+         b = segundaCarta.childNodes[0];
+         a.style.transform = "scale(1.1)";
+         b.style.transform = "scale(1.1)";
+      setTimeout(() => {
+         // style.primeiraFruta(transform: scale(1.1));
+         // primeiraCarta.querySelectorAll();
+         
+         
+         console.log("a = ", a);
+         a.style.backgroundImage = `url("./images/jogo_da_memoria/${ok}.jpg")`;
+        
+         // aumenta tamanho das cartas
+         //toca som
+         //animação
+         //troca imagem das cartas para ok com uma classe com bg imagem important???
+        
+         console.log("Delayed for 1 second.");
+       }, 1000);
+      console.log("sao iguais PARABÉNS!");
 
-      console.log("sao iguais NANANAN");
+
       
    } else {
+      setTimeout(() => {
+
+         console.log("Delayed for 1 second.");
+       }, 1000);
       console.log("sao Diferentes");
-      setTimeout ( () => {
-         primeiraCarta.classList.remove('revela-carta');
-         segundaCarta.classList.remove('revela-carta');
-         primeiraCarta = '';
-         segundaCarta = '';
-      }, 500);
+      // setTimeout ( () => {
+      //    primeiraCarta.classList.remove('revela-carta');
+      //    segundaCarta.classList.remove('revela-carta');
+      //    primeiraCarta = '';
+      //    segundaCarta = '';
+      // }, 500);
    }
 }
 revelaCarta = ({ target }) => {
-   console.log(target);
+   // console.log(target);
+   // console.log("entrou no revela cartas");
+   // let segundaFruta = target.getAttribute('data-frutas');
+   // console.log("segunda carta tributo = ", segundaFruta);
    
    // let javirou = a_carta.className.("revela-carta");
    // console.log(a_carta);
    // console.log(b_carta);
   
-   if (target.classList == "verso-carta") {
-      console.log("VERSO");
-   }
-   if (a_carta.classList == ("frente-carta")) {
-      console.log("FRENTE");
-   }
+   // if (target.classList == "verso-carta") {
+   //    console.log("VERSO");
+   // }
+   // if (a_carta.classList == ("frente-carta")) {
+   //    console.log("FRENTE");
+   // }
 
-   if (primeiraCarta == ''){
+   if (primeiraCarta === '')
+   {
       target.classList.add('revela-carta');
       primeiraCarta = target.parentNode;
-      console.log("PRIMEIRA CARTA VAZIA");
-   } else if (segundaCarta == ''){
+      // console.log("PRIMEIRA CARTA ESTAVA VAZIA");
+      // console.log("primeiraCarta = ", primeiraCarta.getAttribute('data-frutas'));
+      primeiraFruta = primeiraCarta.getAttribute('data-frutas');
+      console.log("Primeira FRUTA = ", primeiraFruta);
+      
+   } else if (segundaCarta === '')
+   {
       target.classList.add('revela-carta');
       segundaCarta = target.parentNode;
-      console.log("SEGUNDA CARTA VAZIA");
+      // console.log("segundaCarta=",segundaCarta.getAttribute('data-frutas'));
+      segundaFruta = segundaCarta.getAttribute('data-frutas');
+      console.log("Segunda FRUTA = ", segundaFruta);
+      
+      checar_Cartas(primeiraFruta , segundaFruta );
    }
 
-   checar_Cartas();
+   
+   
 
    // target.classList.add('revela-carta');
 
