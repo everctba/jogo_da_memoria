@@ -71,10 +71,25 @@ const checar_Cartas = (primeiraFruta, segundaFruta) => {
 
       
    } else {
+      a = primeiraCarta.childNodes[0];
+      b = segundaCarta.childNodes[0];
+      a.style.transform = "scale(1.1)";
+      b.style.transform = "scale(1.1)";
       setTimeout(() => {
 
          console.log("Delayed for 1 second.");
        }, 1000);
+      setTimeout(() => {
+         a.style.transform = "scale(1.0)";
+         b.style.transform = "scale(1.0)";
+
+         //desvira as cartas
+         
+         primeiraCarta = '';
+         segundaCarta = '';
+         
+      },1100);
+       
       console.log("sao Diferentes");
       // setTimeout ( () => {
       //    primeiraCarta.classList.remove('revela-carta');
