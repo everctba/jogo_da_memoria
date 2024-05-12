@@ -34,10 +34,20 @@ const checar_Cartas = (primeiraFruta, segundaFruta) => {
    console.log("primeiraCarta", primeiraCarta);
    console.log("SegundaCarta", segundaCarta);
    // let idCartaMatch = document.getElementsByClassName('primeiraFruta')
-   
-   if (primeiraFruta === segundaFruta){
-         a = primeiraCarta.childNodes[0];
-         b = segundaCarta.childNodes[0];
+   a = primeiraCarta.childNodes[0];
+   b = segundaCarta.childNodes[0];
+   let falgCartaOk = false;
+   console.log(" a = primeiraCarta[0] =", a);
+
+
+   // if (a.style.backgroundImage === `url("./images/jogo_da_memoria/ok.jpg")`) {
+   //    console.log("PIOR QUE A CARTA JÁ TA COM O MATCH FEITO = "); 
+   //    falgCartaOk = true;
+   // }
+
+   if (primeiraFruta === segundaFruta && (a.style.backgroundImage !== `url("./images/jogo_da_memoria/ok.jpg")`) ){
+      console.log("ENTROU POIS CARTAS SÂO IGUAIS!!!");
+
          a.style.transform = "scale(1.1)";
          b.style.transform = "scale(1.1)";
          // a.style.backgroundImage = 'url("./images/jogo_da_memoria/ok.jpg")';
@@ -50,6 +60,10 @@ const checar_Cartas = (primeiraFruta, segundaFruta) => {
          a.style.backgroundImage = `url("./images/jogo_da_memoria/ok.jpg")`;
          b.style.backgroundImage = `url("./images/jogo_da_memoria/ok.jpg")`;
         
+         a.classList.add('cartacerta-z-index');
+         b.classList.add('cartacerta-z-index');
+         a.setAttribute('disabled', '');
+         b.setAttribute('disabled', '');
          // aumenta tamanho das cartas
          //toca som
          //animação
@@ -71,13 +85,20 @@ const checar_Cartas = (primeiraFruta, segundaFruta) => {
 
       
    } else {
+      // console.log("falgCartaOk",falgCartaOk  ); 
+      if(a.style.backgroundImage !== `url("./images/jogo_da_memoria/ok.jpg")`) {
+         console.log("ENTROU NO IFFFFFFF");  
+         a = primeiraCarta.childNodes[0];
+         b = segundaCarta.childNodes[0];
+         a.style.transform = "scale(1.1)";
+         b.style.transform = "scale(1.1)";
+      }
+
       a = primeiraCarta.childNodes[0];
       b = segundaCarta.childNodes[0];
-      a.style.transform = "scale(1.1)";
-      b.style.transform = "scale(1.1)";
       setTimeout(() => {
 
-         console.log("Delayed for 1 second.");
+         console.log("Delayed for 1 second - CARTAS DIFERNETES.");
        }, 1000);
       setTimeout(() => {
          a.style.transform = "scale(1.0)";
@@ -104,18 +125,21 @@ const checar_Cartas = (primeiraFruta, segundaFruta) => {
          
          
          //desvira as cartas
+      
          
-         
-      },1100);
+      },1100); 
       
       
       console.log("sao Diferentes");
+      // falgCartaOk = false;
       // setTimeout ( () => {
          
       //    primeiraCarta = '';
       //    segundaCarta = '';
       // }, 500);
+   
    }
+  
 }
 revelaCarta = ({ target }) => {
    // console.log(target);

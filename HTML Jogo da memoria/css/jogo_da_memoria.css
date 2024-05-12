@@ -106,3 +106,8 @@ body {
 #div_block_fundo {
    background-color: #195e1d87;
 }
+
+.cartacerta-z-index {
+
+   z-index: 20;
+}
