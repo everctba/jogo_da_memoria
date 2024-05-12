@@ -82,18 +82,36 @@ const checar_Cartas = (primeiraFruta, segundaFruta) => {
       setTimeout(() => {
          a.style.transform = "scale(1.0)";
          b.style.transform = "scale(1.0)";
+         console.log("priemira carta 1 =", primeiraCarta);
 
-         //desvira as cartas
-         
+         primeiraCarta.classList.remove('revela-carta');
+         // segundaCarta.children.classList.remove('revela-carta');
+         console.log("priemira carta 2 =", primeiraCarta);
+         // console.log("priemira carta 3 =", primeiraCarta[0]);
+
+         var carta1revelacarta = document.querySelectorAll('.revela-carta');
+         console.log("carta1revelacarta = ", carta1revelacarta);
+         for (var i = 0; i < carta1revelacarta.length; i++) {
+
+            carta1revelacarta[i].classList.remove('revela-carta');
+           
+            console.log("carta1revelacarta = ", carta1revelacarta[i]);
+   
+         }
+
          primeiraCarta = '';
          segundaCarta = '';
          
+         
+         //desvira as cartas
+         
+         
       },1100);
-       
+      
+      
       console.log("sao Diferentes");
       // setTimeout ( () => {
-      //    primeiraCarta.classList.remove('revela-carta');
-      //    segundaCarta.classList.remove('revela-carta');
+         
       //    primeiraCarta = '';
       //    segundaCarta = '';
       // }, 500);
