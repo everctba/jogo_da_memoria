@@ -3,7 +3,7 @@ let a_carta = document.getElementsByClassName("frente-carta");
 let b_carta = [...document.getElementsByClassName("frente-carta")];
 
 //Teste de som
-let  audioAcerto = new Audio("./HTML%20Jogo%20da%20memoria/som/acerto.wav");
+let  audioAcerto = new Audio("../HTML%20Jogo%20da%20memoria/som/acerto.wav");
 let  audioErro = new Audio("../HTML%20Jogo%20da%20memoria/som/erro.wav");
 
 const frutas = [
