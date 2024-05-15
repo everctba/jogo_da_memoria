@@ -2,6 +2,10 @@ const grid = document.querySelector(".grid");
 let a_carta = document.getElementsByClassName("frente-carta");
 let b_carta = [...document.getElementsByClassName("frente-carta")];
 
+//Teste de som
+let  audioAcerto = new Audio("/HTML%20Jogo%20da%20memoria/som/acerto.wav");
+let  audioErro = new Audio("/HTML%20Jogo%20da%20memoria/som/erro.wav");
+
 const frutas = [
    'abacaxi',
    'abacate',
@@ -76,6 +80,7 @@ const checar_Cartas = (primeiraFruta, segundaFruta, naoVira1) => {
       primeiraCarta = '';
       segundaCarta = '';
       console.log("VIX PRIMEIRA  CARTA! = ",d);
+      audioErro.play();
       
    }else{
       if (primeiraFruta === segundaFruta && 
@@ -91,6 +96,8 @@ const checar_Cartas = (primeiraFruta, segundaFruta, naoVira1) => {
             console.log(" f = É Segunda Div?[1] =", f);
             e.style.display = 'none';
             f.style.display = 'none';
+            // toca audio que acertou
+            audioAcerto.play();
             
             a.style.transform = "scale(1.1)";
             b.style.transform = "scale(1.1)";
@@ -138,7 +145,7 @@ const checar_Cartas = (primeiraFruta, segundaFruta, naoVira1) => {
             a.style.transform = "scale(1.1)";
             b.style.transform = "scale(1.1)";
          }
-
+         audioErro.play();
          a = primeiraCarta.childNodes[0];
          b = segundaCarta.childNodes[0];
 
