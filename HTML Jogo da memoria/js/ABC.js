@@ -1,6 +1,8 @@
 const grid = document.querySelector(".grid-abc");
 
-
+let  audioA = new Audio("../HTML%20Jogo%20da%20memoria/som/abc/a.mp3");
+let  audioB = new Audio("../HTML%20Jogo%20da%20memoria/som/abc/b.mp3");
+let  audioC = new Audio("../HTML%20Jogo%20da%20memoria/som/abc/c.mp3");
 
 
 const abcCartas = [
@@ -77,3 +79,6 @@ createCard(abcCartas);
 
 
 console.log(grid);
+audioA.play();
+audioB.play();
+audioC.play();

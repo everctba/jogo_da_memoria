@@ -159,6 +159,7 @@ body {
 
 /* Classe padrão do botão voltar para todas as ocorrências */
 .botao-voltar {
+   margin-top: 8px;
    transition-duration: 1s;
    transform: scale(0.7, 0.7);
    cursor: pointer;
