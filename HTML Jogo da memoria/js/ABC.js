@@ -48,7 +48,16 @@ const abcCartas = [
 
 printE = ({target}) => {
    console.log("entrou no click do botao add event listener");
-   console.log(target);
+   // console.log(target);
+   const pai = target.parentNode;
+   // console.log(pai);
+   var nomeCarta = pai.dataset.carta
+   // console.log("nome carta = ", nomeCarta);
+   console.log(nomeCarta);
+   let  audioTemp = new Audio(`../HTML%20Jogo%20da%20memoria/som/abc/${nomeCarta}.mp3`);
+   audioTemp.play();
+   // = `url("./images/abc/${frente}.jpg")`;
+
 }
 
 
@@ -87,24 +96,45 @@ createCard(abcCartas);
 
 
 // console.log(grid);
-var clicadoAgora = document.querySelectorAll("data-carta");
-console.log(clicadoAgora);
+const clicadoAgora = document.getElementsByClassName("tamanho-carta");
+
+// const elementA = clicadoAgora.dataset();
+// console.log(elementA);
+// for (let i = 0; i < clicadoAgora.length; i++) {
+//    let a = clicadoAgora.dataset.carta;
+//    console.log(a);
+//    }
+
+// let a = clicadoAgora.dataset.carta;
+// // console.log(a);
+// const a1 = clicadoAgora.getAttribute("data-carta");
+// clicadoAgora.forEach( e =>{
+//    console.log(e);
+// })
+console.log(clicadoAgora[1]);
+// console.log(a);
+
+
 // var clicadoAgora = document.getElementsByClassName("tamanho-carta");
 // console.log(clicadoAgora);
 
-// for (var i = 0; i < clicadoAgora.length; i++) {
+for (var i = 0; i < clicadoAgora.length; i++) {
    
-//    clicadoAgora[i].addEventListener("click", printE);
+   clicadoAgora[i].addEventListener("click", printE);
 
-//    console.log("clicadoAgora i  = ", clicadoAgora[i]);
-
-// }
+   console.log("clicadoAgora i  = ", clicadoAgora[i]);
 
 
 
-// clicadoAgora.addEventListener('click', function(e){
-//    console.log("foi clicado no ", e);
-// }); 
+
+}
+
+// clicadoAgora[0].addEventListener("click", printE);
+// clicadoAgora[1].addEventListener("click", printE);
+// clicadoAgora[2].addEventListener("click", printE);
+// clicadoAgora[3].addEventListener("click", printE);
+// clicadoAgora[4].addEventListener("click", printE);
+// clicadoAgora[5].addEventListener("click", printE);
 // clicado.addEventListener("click", printE);
 
 // clicadoAgora.dataset.addEventListener("click", printE);
