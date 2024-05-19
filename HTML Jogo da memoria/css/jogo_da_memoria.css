@@ -1,5 +1,5 @@
 .varela-round-regular {
-   font-family: "Varela Round", sans-serif;
+   /* font-family: "Varela Round", sans-serif; */
    font-weight: 1000;
    font-size: 44px;
    font-style: normal;
@@ -17,6 +17,15 @@
    justify-content: center;
    margin-bottom: 30px;
    text-align: center;
+   -webkit-text-stroke-width: 1.4px;
+   /* --text-stroke-size: 1px;
+   --text-stroke-color: #fb1a1a; */
+   /* border-color: coral; */
+   line-height: 24px;
+   text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.205);
+   color: #0075FE;
+   -webkit-text-stroke-color: white;
+   transform: rotate(-2deg);
 
 }
 

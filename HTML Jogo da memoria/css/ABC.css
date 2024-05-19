@@ -25,8 +25,11 @@
 }
 
 .jogo-tela-cheia {
-   width: 100%;
+   width: 90%;
    max-width: 560px;
+   flex-direction: column;
+   align-content: center;
+   display: flex;
 }
 
 .verso-carta {

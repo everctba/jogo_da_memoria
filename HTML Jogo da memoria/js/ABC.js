@@ -56,7 +56,7 @@ printE = ({target}) => {
    console.log(nomeCarta);
    let  audioTemp = new Audio(`../HTML%20Jogo%20da%20memoria/som/abc/${nomeCarta}.mp3`);
    audioTemp.play();
-   // = `url("./images/abc/${frente}.jpg")`;
+  
 
 }
 
@@ -142,7 +142,3 @@ for (var i = 0; i < clicadoAgora.length; i++) {
 //    console.log("foi clicado no ", e);
 // };
 
-
-audioA.play();
-audioB.play();
-audioC.play();
