@@ -99,6 +99,7 @@ body {
    background-size: cover;
    background-position: center;
    backface-visibility: hidden;
+   background-size: 105%;
 }
 
 /* .frente-carta:hover {
