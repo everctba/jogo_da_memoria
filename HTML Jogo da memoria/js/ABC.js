@@ -83,12 +83,18 @@ const createCard = (frente) => {
 
 
 const carregaCartas = () => {
-   abcCartas.forEach((frente) => {
-      const card = createCard(frente);
-      grid.appendChild(card);
-      card.setAttribute('data-carta', frente);
-   })   
-   
+
+   for (var i = 0; i < 1; i++) {
+      abcCartas.forEach((frente) => {
+         var card = createCard(frente);
+         grid.appendChild(card);
+         console.log("Adicionou carta numero = ", [i]);
+         card.setAttribute('data-carta', frente);  
+        
+      })   
+
+   }
+  
 }
 carregaCartas();
 createCard(abcCartas);
