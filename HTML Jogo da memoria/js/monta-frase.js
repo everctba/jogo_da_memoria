@@ -35,6 +35,25 @@ const Cartas02 = [
 
 ];
 
+const Cartas03 = [
+   'irmã',
+   'irmão',
+   'mãe',
+   'pai',
+   'vovó',
+   'vovô'
+];
+
+const Cartas04 = [
+   'bravo',
+   'feliz',
+   'impressionado',
+   'nervoso',
+   'nojo',
+   'triste'
+];
+
+
 
 
 const criaDiv = (tag, className) => {
