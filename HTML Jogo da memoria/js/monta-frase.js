@@ -5,33 +5,33 @@ const grid02 = document.querySelector(".grid-monta-frase-02");
 
 //serie de cartas
 const Cartas01 = [
-   'cheiro',
-   'falo',
-   'ouco',
-   'penco',
-   'sinto',
-   'vejo'
+   'Cheiro',
+   'Falo',
+   'Ouço',
+   'Penço',
+   'Sinto',
+   'Vejo'
 ];
 
 const Cartas02 = [
-   'calor',
-   'sorvete',
-   'pipa',
-   'correr',
-   'bicicleta',
-   'quebracabeca',
-   'tocar',
-   'pintar',
-   'estudar',
-   'brincar',
-   'cantar',
-   'pular',
-   'basquete',
-   'futebol',
-   'videogame',
-   'fruta',
-   'musica',
-   'ler'
+   'Calor',
+   'Sorvete',
+   'Pipa',
+   'Correr',
+   'Bicicleta',
+   'Quebra-Cabeça',
+   'Tocar',
+   'Pintar',
+   'Estudar',
+   'Brincar',
+   'Cantar',
+   'Pular',
+   'Basquete',
+   'Futebol',
+   'Video Game',
+   'Fruta',
+   'Música',
+   'Ler'
 
 ];
 
@@ -85,7 +85,7 @@ const criaDiv = (tag, className) => {
 
 const createCard01 = (frente) => {
    const card = criaDiv('div','tamanho-carta');
-   const cartaIlustrada = criaDiv('div',' card face verso-carta');
+   var cartaIlustrada = criaDiv('div',' card face verso-carta');
    
    var textoCarta = criaDiv('text','texto-legenda');
    var conteudoTexto = document.createTextNode(`${frente}`);// textoCarta = document.createTextNode("titulo");
@@ -93,9 +93,7 @@ const createCard01 = (frente) => {
    
    cartaIlustrada.style.backgroundImage = `url("./images/monta_frase/01/${frente}.jpg")`;
    
-   // console.log(textoCarta);
-   
-   
+ 
    cartaIlustrada.appendChild(textoCarta);
    card.appendChild(cartaIlustrada);
    // card.appendChild(textoCarta);
@@ -110,9 +108,14 @@ const createCard01 = (frente) => {
 
 const createCard02 = (frente) => {
    const card = criaDiv('div','tamanho-carta');
-   const cartaIlustrada = criaDiv('div',' card face verso-carta');
-  
+   var cartaIlustrada = criaDiv('div',' card face verso-carta');
+   
+   var textoCarta = criaDiv('text','texto-legenda');
+   var conteudoTexto = document.createTextNode(`${frente}`);// textoCarta = document.createTextNode("titulo");
+   textoCarta.appendChild(conteudoTexto);
+   
    cartaIlustrada.style.backgroundImage = `url("./images/monta_frase/02/${frente}.jpg")`;
+   cartaIlustrada.appendChild(textoCarta);
    card.appendChild(cartaIlustrada);
    grid02.appendChild(card);
   
