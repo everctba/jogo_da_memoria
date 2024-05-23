@@ -52,6 +52,26 @@ const Cartas04 = [
    'nojo',
    'triste'
 ];
+const Cartas05 = [
+   'Abacate',
+   'Abacaxi',
+   'Banana',
+   'Batata Frita',
+   'Brócolis',
+   'Café',
+   'Abacate',
+   'Chocolate',
+   'Geleia',
+   'laranja',
+   'Maça',
+   'Melancia',
+   'Morango',
+   'Ovo',
+   'Pizza',
+   'Refrigerante',
+   'Uva'
+];
+
 
 
 
