@@ -84,20 +84,33 @@ const createCard = (frente) => {
 
 const carregaCartas = () => {
 
-   for (var i = 0; i < 1; i++) {
-      abcCartas.forEach((frente) => {
-         var card = createCard(frente);
-         grid.appendChild(card);
-         console.log("Adicionou carta numero = ", [i]);
-         card.setAttribute('data-carta', frente);  
+   for (var i = 0; i <= 35; i++) {
+      
+         // var card =  abcCartas[i];
+         // grid.appendChild(abcCartas[i+1]);
+         if (i<=35) {
+            var card = createCard(abcCartas[i]);
         
-      })   
+            card.setAttribute('data-carta', abcCartas[i]);
+            card.setAttribute('data-carta', abcCartas[i]);  
+            grid.appendChild(card); 
+            console.log("numero = ", [i]);
+         }
+         
+            
+         console.log("Adicionou carta numero = ", abcCartas[i]);
+        
+          // card.setAttribute('data-carta', card);
+         
+         
+      // abcCartas.forEach((frente) => {  
+      // })   
 
    }
   
 }
 carregaCartas();
-createCard(abcCartas);
+// createCard(abcCartas);
 
 
 
@@ -117,7 +130,7 @@ const clicadoAgora = document.getElementsByClassName("tamanho-carta");
 // clicadoAgora.forEach( e =>{
 //    console.log(e);
 // })
-console.log(clicadoAgora[1]);
+// console.log(clicadoAgora[1]);
 // console.log(a);
 
 
