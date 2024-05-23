@@ -236,19 +236,19 @@ const carregaCartas05 = () => {
 
 
 carregaCartas01();
-createCard01(Cartas01);
+// createCard01(Cartas01);
 
 carregaCartas02();
-createCard02(Cartas02);
+// createCard02(Cartas02);
 
 carregaCartas03();
-createCard03(Cartas03);
+// createCard03(Cartas03);
 
 carregaCartas04();
-createCard04(Cartas04);
+// createCard04(Cartas04);
 
 carregaCartas05();
-createCard05(Cartas05);
+// createCard05(Cartas05);
 
 
 const clicadoAgora = document.getElementsByClassName("tamanho-carta");
