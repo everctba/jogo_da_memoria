@@ -55,6 +55,7 @@ const Cartas04 = [
    'nojo',
    'triste'
 ];
+
 const Cartas05 = [
    'Abacate',
    'Abacaxi',
@@ -75,8 +76,26 @@ const Cartas05 = [
    'Uva'
 ];
 
+tocaSom = ({target}) => {
+   console.log("entrou no click do botao add event listener");
+   // console.log(target);
+   const pai = target.parentNode;
+   // console.log(pai);
 
+   // var flag = ('bounce-in-fwd');
+   // pai.className = flag;
 
+   target.classList.add('bounce-in-fwd');
+
+   var nomeCarta = pai.dataset.carta
+   
+   console.log(nomeCarta);
+   // let  audioTemp = new Audio(`../HTML%20Jogo%20da%20memoria/som/abc/${nomeCarta}.mp3`);
+   let  audioTemp = new Audio(`../HTML%20Jogo%20da%20memoria/som/monta-frase/erro.wav`);
+   audioTemp.play();
+  
+
+}
 
 
 const criaDiv = (tag, className) => {
@@ -232,4 +251,18 @@ carregaCartas05();
 createCard05(Cartas05);
 
 
-// Cartas01.forEach((element) => console.log(element));
+const clicadoAgora = document.getElementsByClassName("tamanho-carta");
+console.log(clicadoAgora[1]);
+
+for (var i = 0; i < clicadoAgora.length; i++) {
+   
+   clicadoAgora[i].addEventListener("click", tocaSom);
+   
+
+
+   console.log("clicadoAgora i  = ", clicadoAgora[i]);
+
+
+
+
+}
