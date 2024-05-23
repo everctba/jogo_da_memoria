@@ -59,6 +59,39 @@
 
 }
 
+.grid-monta-frase-03 {
+   display: grid;
+   position: relative;
+   grid-template-columns: repeat(3, minmax(auto, 1fr));
+   gap: 16px;
+   height: 100%;
+   margin: 5% 8%;
+   justify-content: space-between;
+
+}
+
+.grid-monta-frase-04 {
+   display: grid;
+   position: relative;
+   grid-template-columns: repeat(3, minmax(auto, 1fr));
+   gap: 16px;
+   height: 100%;
+   margin: 5% 8%;
+   justify-content: space-between;
+
+}
+
+.grid-monta-frase-05 {
+   display: grid;
+   position: relative;
+   grid-template-columns: repeat(3, minmax(auto, 1fr));
+   gap: 16px;
+   height: 100%;
+   margin: 5% 8%;
+   justify-content: space-between;
+
+}
+
 .tamanho-carta {
    margin-bottom: 28px;
    aspect-ratio: 1/1;

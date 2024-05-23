@@ -1,6 +1,9 @@
 //define os grids específicos
 const grid01 = document.querySelector(".grid-monta-frase-01");
 const grid02 = document.querySelector(".grid-monta-frase-02");
+const grid03 = document.querySelector(".grid-monta-frase-03");
+const grid04 = document.querySelector(".grid-monta-frase-04");
+const grid05 = document.querySelector(".grid-monta-frase-05");
 
 
 //serie de cartas
@@ -121,6 +124,51 @@ const createCard02 = (frente) => {
   
    return card;
 }
+const createCard03 = (frente) => {
+   const card = criaDiv('div','tamanho-carta');
+   var cartaIlustrada = criaDiv('div',' card face verso-carta');
+   
+   var textoCarta = criaDiv('text','texto-legenda');
+   var conteudoTexto = document.createTextNode(`${frente}`);// textoCarta = document.createTextNode("titulo");
+   textoCarta.appendChild(conteudoTexto);
+   
+   cartaIlustrada.style.backgroundImage = `url("./images/monta_frase/03/${frente}.jpg")`;
+   cartaIlustrada.appendChild(textoCarta);
+   card.appendChild(cartaIlustrada);
+   grid03.appendChild(card);
+  
+   return card;
+}
+const createCard04 = (frente) => {
+   const card = criaDiv('div','tamanho-carta');
+   var cartaIlustrada = criaDiv('div',' card face verso-carta');
+   
+   var textoCarta = criaDiv('text','texto-legenda');
+   var conteudoTexto = document.createTextNode(`${frente}`);// textoCarta = document.createTextNode("titulo");
+   textoCarta.appendChild(conteudoTexto);
+   
+   cartaIlustrada.style.backgroundImage = `url("./images/monta_frase/04/${frente}.jpg")`;
+   cartaIlustrada.appendChild(textoCarta);
+   card.appendChild(cartaIlustrada);
+   grid04.appendChild(card);
+  
+   return card;
+}
+const createCard05 = (frente) => {
+   const card = criaDiv('div','tamanho-carta');
+   var cartaIlustrada = criaDiv('div',' card face verso-carta');
+   
+   var textoCarta = criaDiv('text','texto-legenda');
+   var conteudoTexto = document.createTextNode(`${frente}`);// textoCarta = document.createTextNode("titulo");
+   textoCarta.appendChild(conteudoTexto);
+   
+   cartaIlustrada.style.backgroundImage = `url("./images/monta_frase/05/${frente}.jpg")`;
+   cartaIlustrada.appendChild(textoCarta);
+   card.appendChild(cartaIlustrada);
+   grid05.appendChild(card);
+  
+   return card;
+}
 const carregaCartas01 = () => {
    Cartas01.forEach((frente) => {
       const card = createCard01(frente);
@@ -132,6 +180,27 @@ const carregaCartas02 = () => {
    Cartas02.forEach((frente) => {
       const card = createCard02(frente);
       grid02.appendChild(card);
+      card.setAttribute('data-carta', frente);
+   })   
+}
+const carregaCartas03 = () => {
+   Cartas03.forEach((frente) => {
+      const card = createCard03(frente);
+      grid03.appendChild(card);
+      card.setAttribute('data-carta', frente);
+   })   
+}
+const carregaCartas04 = () => {
+   Cartas04.forEach((frente) => {
+      const card = createCard04(frente);
+      grid04.appendChild(card);
+      card.setAttribute('data-carta', frente);
+   })   
+}
+const carregaCartas05 = () => {
+   Cartas05.forEach((frente) => {
+      const card = createCard05(frente);
+      grid05.appendChild(card);
       card.setAttribute('data-carta', frente);
    })   
 }
@@ -152,6 +221,15 @@ createCard01(Cartas01);
 
 carregaCartas02();
 createCard02(Cartas02);
+
+carregaCartas03();
+createCard03(Cartas03);
+
+carregaCartas04();
+createCard04(Cartas04);
+
+carregaCartas05();
+createCard05(Cartas05);
 
 
 // Cartas01.forEach((element) => console.log(element));
