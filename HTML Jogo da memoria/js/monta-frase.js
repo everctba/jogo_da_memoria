@@ -49,14 +49,13 @@ const createCard01 = (frente) => {
    const cartaIlustrada = criaDiv('div',' card face verso-carta');
    
    var textoCarta = criaDiv('text','texto-legenda');
-   var conteudoTexto = document.createTextNode("titulo");// textoCarta = document.createTextNode("titulo");
+   var conteudoTexto = document.createTextNode(`${frente}`);// textoCarta = document.createTextNode("titulo");
    textoCarta.appendChild(conteudoTexto);
    
    cartaIlustrada.style.backgroundImage = `url("./images/monta_frase/01/${frente}.jpg")`;
    
    // console.log(textoCarta);
    
-   const textoCarta1 = document.createTextNode('titulo');
    
    cartaIlustrada.appendChild(textoCarta);
    card.appendChild(cartaIlustrada);

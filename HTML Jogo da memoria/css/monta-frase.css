@@ -23,6 +23,11 @@
 .texto-legenda {
    bottom: -26px;
    position: relative;
+   -webkit-text-stroke-width: 0.2px;
+   text-shadow: 1px 1px 1px rgb(255 255 255);
+   color: #000000;
+   -webkit-text-stroke-color: white;
+
 }
 
 .centraliza-linha {
