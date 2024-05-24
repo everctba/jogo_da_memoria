@@ -9,7 +9,7 @@ const grid05 = document.querySelector(".grid-monta-frase-05");
 //serie de cartas
 const Cartas01 = [
    'Cheiro',
-   'Falo',
+   'Fala',
    'Ouço',
    'Penço',
    'Sinto',
@@ -57,23 +57,23 @@ const Cartas04 = [
 ];
 
 const Cartas05 = [
-   'Abacate',
-   'Abacaxi',
-   'Banana',
-   'Batata Frita',
-   'Brócolis',
+   'Pizza',
+   'Maçã',
+   'Ovo',
    'Café',
+   'Geleia',
    'Abacate',
    'Chocolate',
-   'Geleia',
-   'laranja',
-   'Maça',
+   'Brócolis',
    'Melancia',
-   'Morango',
-   'Ovo',
-   'Pizza',
+   'Batata Frita',
    'Refrigerante',
-   'Uva'
+   'Banana',
+   'Morango',
+   'Laranja',
+   'Uva',
+   'Abacaxi'   
+   
 ];
 
 tocaSom = ({target}) => {
