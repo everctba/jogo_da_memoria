@@ -21,8 +21,8 @@ def printa_matriz():
 def menu_instrucoes():
     #Menu game instruções  
     print('\n'*50)
-    print ('------------------------------------')
-    print (' P = Python, R = Rust, J = Java, K = Korlin')
+    print ('-------------------------------------------------')
+    print ('A = Abacaxi, B = Banana, L = Laranja, M = Morango')
     print ('')
 
 
@@ -32,29 +32,29 @@ def menu_instrucoes():
 matriz = []
 
 #Cartas aleatórias
-posiveis_cartas = ["J","J","P","R","P","R","K","K"]
+posiveis_cartas = ["L","L","A","B","A","B","M","M"]
 lista_de_cartas_aletorias = []
 
 while len(posiveis_cartas) > 0:
 
     tamanho_lista_atual = len(posiveis_cartas)
-    print (' ')
+    # print (' ')
     # pega um numero aleatório
     carta_aleatoria = random.choice(posiveis_cartas)
     # ADiciona card aleatorio a lista aleatoria
     lista_de_cartas_aletorias.append(carta_aleatoria)
-    print ('carta_aleatoria:', carta_aleatoria)
-    print (' ')
-    print ('tamanho_lista_atual: ',tamanho_lista_atual)
+    # print ('carta_aleatoria:', carta_aleatoria)
+    # print (' ')
+    # print ('tamanho_lista_atual: ',tamanho_lista_atual)
     carta_selecionada = carta_aleatoria
     
     #Remove uma carta da lista
     posiveis_cartas.remove(carta_aleatoria)
-    print ('Lista menos item:', posiveis_cartas)
-    time.sleep(0.5)
-print ('--------------------')
-print ('Lista distribuida aleatoriamente:', lista_de_cartas_aletorias)
-print ('--------------------')
+    # print ('Lista menos item:', posiveis_cartas)
+    # time.sleep(0.5)
+# print ('--------------------')
+# print ('Lista distribuida aleatoriamente:', lista_de_cartas_aletorias)
+# print ('--------------------')
 card0 = {"card":1,"linguagem":lista_de_cartas_aletorias[0]}
 card1 = {"card":2,"linguagem":lista_de_cartas_aletorias[1]}
 card2 = {"card":3,"linguagem":lista_de_cartas_aletorias[2]}
