@@ -90,8 +90,8 @@ tocaSom = ({target}) => {
    var nomeCarta = pai.dataset.carta
    
    console.log(nomeCarta);
-   // let  audioTemp = new Audio(`../HTML%20Jogo%20da%20memoria/som/abc/${nomeCarta}.mp3`);
-   let  audioTemp = new Audio(`../HTML%20Jogo%20da%20memoria/som/monta-frase/erro.wav`);
+   let  audioTemp = new Audio(`../HTML%20Jogo%20da%20memoria/som/monta-frase/${nomeCarta}.mp3`);
+   // let  audioTemp = new Audio(`../HTML%20Jogo%20da%20memoria/som/monta-frase/erro.wav`);
    audioTemp.play();
   
 
