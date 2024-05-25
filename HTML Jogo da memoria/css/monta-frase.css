@@ -21,8 +21,11 @@
 }
 
 .texto-legenda {
+   font-size: 17px;
    bottom: -26px;
    position: relative;
+   text-align: center;
+   white-space: nowrap;
    -webkit-text-stroke-width: 0.2px;
    text-shadow: 1px 1px 1px rgb(212, 212, 212);
    color: #000000;
