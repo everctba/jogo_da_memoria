@@ -1,4 +1,9 @@
 
+# Trabalho desenvolvido por:
+# Diogo Felipe
+# Everson Mayer
+# Jhairo Joel
+
 import random 
 import time
 continuar_jogando = True
@@ -21,6 +26,7 @@ def printa_matriz():
 def menu_instrucoes():
     #Menu game instruções  
     print('\n'*50)
+    print ('Desenvolvido por Diogo Felipe, Everson Mayer e Jhairo Joel')
     print ('-------------------------------------------------')
     print ('A = Abacaxi, B = Banana, L = Laranja, M = Morango')
     print ('')
@@ -92,7 +98,7 @@ while continuar_jogando:
     
     while int(carta_1) > numeros_de_cartas:
         print ('Favor digitar o número de uma das 8 cartas!')
-        ('------------------------')
+        print ('------------------------')
         carta_1 = input("Escolha PRIMEIRA carta: ")
     compara_com_carta_1=carta_1
     carta_1_em_int = int(carta_1)
@@ -108,11 +114,11 @@ while continuar_jogando:
     carta_2 = input("Escolha da SEGUNDA carta: ")
     if int(carta_2) > numeros_de_cartas:
         print ('Favor digitar o número de uma das 8 cartas!')
-        ('------------------------')
+        print ('------------------------')
         carta_2 = input("Escolha SEGUNDA carta: ")
     while int(carta_2) == int(compara_com_carta_1):
         print ('Favor escolha uma carta diferente!')
-        ('------------------------')
+        print ('------------------------')
         carta_2 = input("Escolha SEGUNDA carta: ")   
     carta_2_em_int = int(carta_2)
     carta_2_em_int = carta_2_em_int-1
@@ -128,8 +134,8 @@ while continuar_jogando:
 
     str(resultado1)
     str(resultado2)
-    ('------------------------')
-    print (resultado1 + " & " + resultado2)
+    print('------------------------')
+    print(resultado1 + " & " + resultado2)
 
 
     if  resultado1 == resultado2:
