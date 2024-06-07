@@ -7,17 +7,19 @@
    border-width: 4px;
    border-color: aliceblue;
    border-radius: 4px;
-   -webkit-text-stroke-width: 0.1px;
-   -webkit-text-stroke-color: white;
+   /* -webkit-text-stroke-width: 0.1px; */
+   /* -webkit-text-stroke-color: white; */
    text-shadow: 5px 4px 10px #000000;
 }
 
 .titulo-jogo-memoria {
+   z-index: 2;
    display: flex;
+   position: relative;
    justify-content: center;
    margin-bottom: 30px;
    text-align: center;
-   -webkit-text-stroke-width: 1.4px;
+   /* -webkit-text-stroke-width: 1.4px; */
    /* --text-stroke-size: 1px;
    --text-stroke-color: #fb1a1a; */
    /* border-color: coral; */
@@ -27,6 +29,31 @@
    -webkit-text-stroke-color: white;
    transform: rotate(-2deg);
 
+}
+
+.titulo-jogo-memoria-borda {
+   z-index: 1;
+   display: flex;
+   position: absolute;
+   justify-content: center;
+   margin-bottom: 30px;
+   text-align: center;
+   -webkit-text-stroke-width: 9.4px;
+   /* --text-stroke-size: 1px;
+   --text-stroke-color: #fb1a1a; */
+   /* border-color: coral; */
+   line-height: 40px;
+   text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.205);
+   color: #0075FE;
+   -webkit-text-stroke-color: white;
+   transform: rotate(-2deg);
+
+}
+
+.font-com-borda {
+   position: relative;
+   display: flex;
+   justify-content: center;
 }
 
 body {
