@@ -84,7 +84,7 @@
 
 #titulo-escolha {
    z-index: 2;
-   width: 80%;
+   width: 99%;
    /* -webkit-text-stroke-width: 1px; */
    text-align: center;
    margin-top: 25px;
@@ -99,7 +99,7 @@
 #titulo-escolha-borda {
    z-index: 1;
    position: absolute;
-   width: 80%;
+   width: 99%;
    -webkit-text-stroke-width: 8px;
    text-align: center;
    margin-top: 25px;
