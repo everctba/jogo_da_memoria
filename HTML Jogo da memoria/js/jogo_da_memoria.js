@@ -1,3 +1,6 @@
+
+
+
 const grid = document.querySelector(".grid");
 let a_carta = document.getElementsByClassName("frente-carta");
 let b_carta = [...document.getElementsByClassName("frente-carta")];
@@ -5,6 +8,9 @@ let b_carta = [...document.getElementsByClassName("frente-carta")];
 //Teste de som
 let  audioAcerto = new Audio("../HTML%20Jogo%20da%20memoria/som/acerto.wav");
 let  audioErro = new Audio("../HTML%20Jogo%20da%20memoria/som/erro.wav");
+let  audioParabens = new Audio("../HTML%20Jogo%20da%20memoria/som/parabens-song.mp3");
+
+let acertosAtuais = null;
 
 const frutas = [
    'abacaxi',
@@ -20,6 +26,7 @@ const frutas = [
    'melancia',
    'uva',
 ];
+let quantidadeDeMatchNecessarios = (frutas.length/2);
 
 const criaDiv = (tag, className) => {
    const element = document.createElement(tag);
@@ -98,6 +105,10 @@ const checar_Cartas = (primeiraFruta, segundaFruta, naoVira1) => {
             f.style.display = 'none';
             // toca audio que acertou
             audioAcerto.play();
+            //adiciona acerto ao contador
+            acertosAtuais = acertosAtuais+1; 
+            // console.log("quantidade de acertos atuais: ",acertosAtuais); 
+                  
             
             a.style.transform = "scale(1.1)";
             b.style.transform = "scale(1.1)";
@@ -132,7 +143,8 @@ const checar_Cartas = (primeiraFruta, segundaFruta, naoVira1) => {
          
 
          console.log("sao iguais PARABÉNS!");
-
+         //chama a tela de parabéns se terminou de virar tudo
+         seTerminou();   
 
          
       } else {  // se cartas são diferente ele desvira as cartas e reseta
@@ -332,6 +344,24 @@ revelaCarta = ({ target }) => {
 
 }
 
+const seTerminou = () => {
+   console.log("quantidade total de matches ",quantidadeDeMatchNecessarios);
+   console.log("quantidade de acertos atuais: ",acertosAtuais);
+   let fimDeJogo = document.getElementById("gameOver")
+
+   if (acertosAtuais == quantidadeDeMatchNecessarios ) {
+      
+      setTimeout(() => {
+         fimDeJogo.style.display = "flex";
+         itemAnima3.goToAndPlay(0,true);
+         audioParabens.play();
+      } ,1150);
+      
+   }
+
+   
+}
+
 const createCard = (frente) => {
    const card = criaDiv('div','tamanho-carta');
    const front = criaDiv('div',' card face verso-carta');
@@ -360,3 +390,9 @@ const loadGame = () => {
 }
 loadGame();
 
+function restart(){
+   location.reload();
+   return false;
+
+}
+  
