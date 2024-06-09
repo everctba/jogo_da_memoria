@@ -113,6 +113,19 @@ body {
    text-shadow: 1px 1px 9px white;
 }
 
+.centraliza-botao-iniciar {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 80%;
+   max-width: 450px;
+}
+
+
+#img-comecar {
+   width: 80%;
+}
+
 .botao-iniciar {
    /* background: url(..\images\menu\comecar-botao.png) no-repeat; */
 
