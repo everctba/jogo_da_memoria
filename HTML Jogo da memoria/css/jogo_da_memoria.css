@@ -216,6 +216,9 @@ body {
 #texto-centrado {
    display: flex;
    text-align: center;
+   width: 68%;
+   flex-direction: column;
+   align-items: center;
 }
 
 .quadrado-jogo-da-meoria {
