@@ -152,3 +152,67 @@ body {
 
    z-index: 20;
 }
+
+#gameOver {
+   font-size: 32px;
+   z-index: 10;
+   color: aliceblue;
+   display: none;
+   flex-direction: column;
+   align-content: center;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.805);
+   top: 0;
+
+}
+
+#restart {
+   font-weight: 800;
+   font-size: 20px;
+   border: 0;
+   border-radius: 32px;
+   background-color: chocolate;
+   color: #ffffff;
+   padding: 16px;
+   padding-left: 32px;
+   padding-right: 32px;
+   margin-top: 24px;
+   margin-bottom: 165px;
+}
+
+#restart:hover {
+
+   border: 0;
+   border-radius: 32px;
+   background-color: rgb(255, 118, 20);
+   color: #ffffff;
+   padding: 16px;
+   padding-left: 32px;
+   padding-right: 32px;
+   margin-top: 24px;
+   transition: all 400ms ease;
+   transform: scale(1.05);
+}
+
+#restart:active {
+
+   border: 0;
+   border-radius: 32px;
+   background-color: rgb(255, 220, 22);
+   color: #ffffff;
+   padding: 16px;
+   padding-left: 32px;
+   padding-right: 32px;
+   margin-top: 24px;
+   transition: all 100ms ease;
+   transform: scale(1.05);
+}
+
+#texto-centrado {
+   display: flex;
+   text-align: center;
+}
