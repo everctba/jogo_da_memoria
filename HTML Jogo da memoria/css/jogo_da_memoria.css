@@ -168,6 +168,7 @@ body {
    background-color: rgba(0, 0, 0, 0.805);
    top: 0;
    transition: all 400ms ease-in-out;
+   backdrop-filter: blur(8px);
 
 }
 
