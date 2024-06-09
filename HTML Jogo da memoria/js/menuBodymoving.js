@@ -38,6 +38,14 @@ var itemAnima = lottie.loadAnimation({
    path:  './js/linha.json'
 });
 itemAnima.goToAndPlay(0,true);
+var itemAnima = lottie.loadAnimation({
+   wrapper: anim2[4],
+   animType: 'svg',
+   loop: true,
+   autoplay: false,
+   path:  './js/linha.json'
+});
+itemAnima.goToAndPlay(0,true);
 // anim.addEventListener('click', () => {
 // });
 // botao.addEventListener('click', () => {

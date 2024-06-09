@@ -86,6 +86,10 @@ tocaSom = ({target}) => {
    // pai.className = flag;
 
    target.classList.add('bounce-in-fwd');
+   setTimeout(() => {
+      target.classList.remove('bounce-in-fwd');
+      
+   } ,350);
 
    var nomeCarta = pai.dataset.carta
    

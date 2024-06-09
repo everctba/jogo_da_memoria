@@ -324,3 +324,11 @@
       animation-timing-function: ease-out;
    }
 }
+
+
+.linha-1-anima {
+   width: 250px;
+   margin-bottom: 15px;
+   /* background-color: blueviolet; */
+   height: 38px;
+}
