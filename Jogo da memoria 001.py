@@ -111,7 +111,7 @@ while continuar_jogando:
     
     carta_1_linguagem = matriz[carta_1_em_int]["linguagem"]
     for i in listas_de_match:
-        print("linguage = ", i)
+        # print("linguage = ", i)
         while carta_1_linguagem == i: 
             # print("Essa carta ja foi virada = ", i) 
             carta_1 = input("Escolha uma PRIMEIRA carta que ainda não foi virada: ")
@@ -151,7 +151,22 @@ while continuar_jogando:
     #print ('')
     print ("carta", carta_2_em_int+1, "é:", matriz[carta_2_em_int]["linguagem"])
     print ('')
-
+    
+    #COMPARA SE JÀ  FOI VIRADA A  SEGUNDA CARTA
+    carta_2_linguagem = matriz[carta_2_em_int]["linguagem"]
+    for i in listas_de_match:
+        # print("linguage = ", i)
+        while carta_2_linguagem == i: 
+            # print("Essa carta ja foi virada = ", i) 
+            carta_2 = input("Escolha uma SEGUNDA carta que ainda não foi virada: ")
+                
+            compara_com_carta_2=carta_2
+            carta_2_em_int = int(carta_2)
+            carta_2_em_int = carta_2_em_int-1  
+            carta_2_linguagem = matriz[carta_2_em_int]["linguagem"]
+            for j in listas_de_match:
+                if carta_2_linguagem == j:
+                    carta_2_linguagem = i 
     #print Resultado de comparação
     resultado1 = matriz[carta_1_em_int]["linguagem"]
     resultado2 = matriz[carta_2_em_int]["linguagem"]
