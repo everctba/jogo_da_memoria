@@ -43,6 +43,7 @@ posiveis_cartas = ["L","L","A","B","A","B","M","M"]
 lista_de_cartas_aletorias = []
 listas_de_match = []
 
+
 while len(posiveis_cartas) > 0:
 
     tamanho_lista_atual = len(posiveis_cartas)
@@ -109,16 +110,20 @@ while continuar_jogando:
     
     
     carta_1_linguagem = matriz[carta_1_em_int]["linguagem"]
-    for linguage in listas_de_match:
-        print("linguage = ", linguage)
-        while carta_1_linguagem == linguage: 
-            print("Essa carta ja foi virada = ", linguage) 
+    for i in listas_de_match:
+        print("linguage = ", i)
+        while carta_1_linguagem == i: 
+            # print("Essa carta ja foi virada = ", i) 
             carta_1 = input("Escolha uma PRIMEIRA carta que ainda não foi virada: ")
+            
             compara_com_carta_1=carta_1
             carta_1_em_int = int(carta_1)
             carta_1_em_int = carta_1_em_int-1  
             carta_1_linguagem = matriz[carta_1_em_int]["linguagem"]
-             
+            for j in listas_de_match:
+                if carta_1_linguagem == j:
+                    carta_1_linguagem = i 
+                       
             # ja_virou = True
     
     print ("carta", carta_1_em_int+1, "é:",  matriz[carta_1_em_int]["linguagem"])
