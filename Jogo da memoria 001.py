@@ -7,9 +7,10 @@
 import random 
 import time
 continuar_jogando = True
-
+# ja_virou = False
 numeros_de_cartas = 8
 contador_de_game_terminado = 0
+contador_lista_match = 0
 #funcção de limpar tela
 def limpa_tela():
     MOVE_CURSOR_UP = "\033[1A"
@@ -40,6 +41,7 @@ matriz = []
 #Cartas aleatórias
 posiveis_cartas = ["L","L","A","B","A","B","M","M"]
 lista_de_cartas_aletorias = []
+listas_de_match = []
 
 while len(posiveis_cartas) > 0:
 
@@ -79,7 +81,7 @@ matriz.append(card5)
 matriz.append(card6)
 matriz.append(card7)
 
-
+#jogo começa aqui
 while continuar_jogando:
     # se o jogador acertou todas as cartas então fim de jogo:
     if contador_de_game_terminado == 4:
@@ -106,16 +108,33 @@ while continuar_jogando:
     print ('')
     
     
+    carta_1_linguagem = matriz[carta_1_em_int]["linguagem"]
+    for linguage in listas_de_match:
+        print("linguage = ", linguage)
+        while carta_1_linguagem == linguage: 
+            print("Essa carta ja foi virada = ", linguage) 
+            carta_1 = input("Escolha uma PRIMEIRA carta que ainda não foi virada: ")
+            compara_com_carta_1=carta_1
+            carta_1_em_int = int(carta_1)
+            carta_1_em_int = carta_1_em_int-1  
+            carta_1_linguagem = matriz[carta_1_em_int]["linguagem"]
+             
+            # ja_virou = True
+    
     print ("carta", carta_1_em_int+1, "é:",  matriz[carta_1_em_int]["linguagem"])
     print ('')
     #print ("numero da carta na memoria: ",carta_1_em_int)
 
 
     carta_2 = input("Escolha da SEGUNDA carta: ")
+    
+      #tratmento de erro se carta estiver fora do range
     if int(carta_2) > numeros_de_cartas:
         print ('Favor digitar o número de uma das 8 cartas!')
         print ('------------------------')
         carta_2 = input("Escolha SEGUNDA carta: ")
+    
+    #compara se cartas são as mesmas      
     while int(carta_2) == int(compara_com_carta_1):
         print ('Favor escolha uma carta diferente!')
         print ('------------------------')
@@ -137,8 +156,12 @@ while continuar_jogando:
     print('------------------------')
     print(resultado1 + " & " + resultado2)
 
-
+    #compara se cartas são iguas 
     if  resultado1 == resultado2:
+        
+        listas_de_match.append(resultado1)
+        contador_lista_match = contador_lista_match+1 
+        print ('listas_de_match = ', listas_de_match)
         contador_de_game_terminado = contador_de_game_terminado+1
         #Substitui o numero pelo nome da carta
         matriz[carta_1_em_int]["card"] = matriz[carta_1_em_int]["linguagem"]
@@ -155,7 +178,7 @@ while continuar_jogando:
         print ('')
 
     
-    time.sleep(3)
+    time.sleep(2)
     
     limpa_tela()
     #print ('tempo sleep passou!')
