@@ -53,6 +53,7 @@ body {
 .rectangle-ceu,
 .rectangle-ceu * {
    box-sizing: border-box;
+
 }
 
 .rectangle-ceu {
@@ -72,6 +73,7 @@ body {
    flex-direction: column;
    align-items: center;
    justify-content: center;
+   overflow-x: hidden;
 }
 
 
@@ -248,4 +250,24 @@ body {
    width: 100%;
    flex-direction: column;
    justify-content: flex-start;
+}
+
+.anima-nuven {
+   overflow-x: hidden;
+   overflow: hidden;
+   position: absolute;
+   z-index: -1;
+   transform: scale(2.0);
+   top: 150px;
+   opacity: 0.53;
+}
+
+.nuven2 {
+   overflow-x: hidden;
+   overflow: hidden;
+   position: absolute;
+   z-index: -1;
+   transform: scale(2.0);
+   top: 613px !important;
+   opacity: 0.43;
 }

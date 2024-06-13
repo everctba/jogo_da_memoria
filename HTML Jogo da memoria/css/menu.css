@@ -26,6 +26,7 @@
    align-items: center;
    /* justify-content: center; */
    justify-content: flex-start;
+   overflow-x: hidden;
 }
 
 #texto-abc {
