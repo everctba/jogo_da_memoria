@@ -6,10 +6,13 @@ let a_carta = document.getElementsByClassName("frente-carta");
 let b_carta = [...document.getElementsByClassName("frente-carta")];
 
 //Teste de som
-let  audioAcerto = new Audio("../HTML%20Jogo%20da%20memoria/som/acerto.wav");
-let  audioErro = new Audio("../HTML%20Jogo%20da%20memoria/som/erro.wav");
-let  audioParabens = new Audio("../HTML%20Jogo%20da%20memoria/som/parabens-song.mp3");
-
+let  audioAcerto = new Audio("../HTML%20Jogo%20da%20memoria/som/acerto.mp3");
+let  audioErro = new Audio("../HTML%20Jogo%20da%20memoria/som/erro.mp3");
+let  audioParabens = new Audio("../HTML%20Jogo%20da%20memoria/som/Fonny-menu.mp3");
+let  audioBG = new Audio("../HTML%20Jogo%20da%20memoria/som/Fonny-bg.mp3");
+audioParabens.loop = true; 
+audioBG.loop = true; 
+audioBG.play();
 let acertosAtuais = null;
 
 const frutas = [
@@ -350,6 +353,7 @@ const seTerminou = () => {
       setTimeout(() => {
          fimDeJogo.style.display = "flex";
          itemAnima3.goToAndPlay(0,true);
+         audioBG.pause();
          audioParabens.play();
       } ,1150);
       
