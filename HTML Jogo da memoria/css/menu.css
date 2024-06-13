@@ -173,3 +173,7 @@
    top: 613px !important;
    opacity: 0.43;
 }
+
+svg:not(:root) {
+   overflow: hidden !important;
+}
