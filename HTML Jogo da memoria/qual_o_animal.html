@@ -16,7 +16,8 @@
 <script defer src="./js/qual-o-animal.js"></script>
 
 <script defer src="js/lottie.js"></script>
-<script defer src="./js/bodymoving-jogo_da_memoria.js"></script>
+<!-- <script defer src="./js/bodymoving-jogo_da_memoria.js"></script> -->
+<script defer src="./js/bodymoving-qual-o-animal.js"></script>
 <script src="js/lottie.js" type="text/javascript"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   
@@ -35,12 +36,12 @@
          <a class="varela-round-regular  titulo-jogo-memoria-borda " >Qual o Animal?</a> 
       </div>
       <div class="grid_animal">
-         <div class="pato card face tamanho-carta" ></div>
+         <div class="pato card face tamanho-carta " ></div>
          <div class="porco card face tamanho-carta" ></div>
          <div class="frango card face tamanho-carta" ></div>
          <div class="vaca card face tamanho-carta" ></div>
          <div class="ovelha card face tamanho-carta" ></div>
-         <div class="cavalo card face tamanho-carta" ></div>
+         <div class="cavalo card face tamanho-carta resolvido" ></div>
          <div class="coelho card face tamanho-carta" ></div>
          <div class="bode card face tamanho-carta" ></div>
          <div class="gato card face tamanho-carta" ></div>
@@ -48,14 +49,31 @@
       
       <div id="card-menu-pato">
          <div class="texto-centrado">
-            <div class="casa-voltar-home-animal"><a href="..\HTML Jogo da memoria\menu.html" >
+            <div class="casa-voltar-home-animal">
+            <!-- <a href="..\HTML Jogo da memoria\menu.html" >
                <img src=".\images\menu\botao-voltar.png" alt="Voltar para o menu" class="botao-voltar">
-            </a>
-            Qual Animal?
-            <div class="pato card face tamanho-carta mini-icone" ></div>
+            </a> -->
+            Qual o Animal?
+            <div class="pato card face mini-icone" ></div>
          </div>
-         <div class="quadrado-jogo-da-meoria "></div>
-         <button id="restart" onclick="restart()">Jogue Novamente</button>
+         <div class="confeti-pato"></div>
+         <button class="opcao certo opcao-pato-1" data-opcao="certo-pato" >Pato</button>
+         <button class="opcao errado opcao-pato-2" data-opcao="errado-pato" >Porco</button>
+         <button class="opcao errado opcao-pato-3" data-opcao="errado-pato" >Frango</button>
+      </div> 
+      <div id="card-menu-porco">
+         <div class="texto-centrado">
+            <div class="casa-voltar-home-animal">
+            <!-- <a href="..\HTML Jogo da memoria\menu.html" >
+               <img src=".\images\menu\botao-voltar.png" alt="Voltar para o menu" class="botao-voltar">
+            </a> -->
+            Qual o Animal?
+            <div class="porco card face mini-icone" ></div>
+         </div>
+         <div class="confeti-porco"></div>
+         <button class="opcao certo opcao-porco-1"  >Pato</button>
+         <button class="opcao errado opcao-porco-2" >Porco</button>
+         <button class="opcao errado opcao-porco-3" >Frango</button>
       </div> 
       
       <!-- <div class="linha-1-anima"></div> -->
