@@ -20,7 +20,7 @@
 <script defer src="./js/bodymoving-qual-o-animal.js"></script>
 <script src="js/lottie.js" type="text/javascript"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
+<script defer src="js/ABCMusica.js"></script>  
 
 <title >Qual o Animal?</title>
 
@@ -41,7 +41,7 @@
          <div class="frango card face tamanho-carta" ></div>
          <div class="vaca card face tamanho-carta" ></div>
          <div class="ovelha card face tamanho-carta" ></div>
-         <div class="cavalo card face tamanho-carta resolvido" ></div>
+         <div class="cavalo card face tamanho-carta " ></div>
          <div class="coelho card face tamanho-carta" ></div>
          <div class="bode card face tamanho-carta" ></div>
          <div class="gato card face tamanho-carta" ></div>
@@ -78,9 +78,9 @@
             <div class="frango card face mini-icone" ></div>
          </div>
          <div class="confeti-frango"></div>
-         <button class="opcao errado opcao-porco-2" >Pato</button>
-         <button class="opcao errado opcao-porco-3" >Porco</button>
-         <button class="opcao certo  opcao-porco-1" >Frango</button>
+         <button class="opcao errado opcao-frango-2" >Pato</button>
+         <button class="opcao errado opcao-frango-3" >Porco</button>
+         <button class="opcao certo  opcao-frango-1" >Frango</button>
          </div> 
       </div>
       <div id="card-menu-vaca">
@@ -90,9 +90,9 @@
             <div class="vaca card face mini-icone" ></div>
          </div>
          <div class="confeti-vaca"></div>
-         <button class="opcao certo  opcao-porco-1" >Vaca</button>
-         <button class="opcao errado opcao-porco-3" >Gato</button>
-         <button class="opcao errado opcao-porco-2" >Frango</button>
+         <button class="opcao certo  opcao-vaca-1" >Vaca</button>
+         <button class="opcao errado opcao-vaca-3" >Gato</button>
+         <button class="opcao errado opcao-vaca-2" >Frango</button>
          </div> 
       </div>
       <div id="card-menu-ovelha">
@@ -102,9 +102,9 @@
             <div class="ovelha card face mini-icone" ></div>
          </div>
          <div class="confeti-ovelha"></div>
-         <button class="opcao certo  opcao-porco-1" >Ovelha</button>
-         <button class="opcao errado opcao-porco-3" >Gato</button>
-         <button class="opcao errado opcao-porco-2" >Pato</button>
+         <button class="opcao certo  opcao-ovelha-1" >Ovelha</button>
+         <button class="opcao errado opcao-ovelha-3" >Gato</button>
+         <button class="opcao errado opcao-ovelha-2" >Pato</button>
          </div> 
       </div>
       <div id="card-menu-cavalo">
@@ -114,9 +114,9 @@
             <div class="cavalo card face mini-icone" ></div>
          </div>
          <div class="confeti-cavalo"></div>
-         <button class="opcao errado opcao-porco-2" >Porco</button>
-         <button class="opcao errado opcao-porco-3" >Gato</button>
-         <button class="opcao certo  opcao-porco-1" >Cavalo</button>
+         <button class="opcao errado opcao-cavalo-2" >Porco</button>
+         <button class="opcao errado opcao-cavalo-3" >Gato</button>
+         <button class="opcao certo  opcao-cavalo-1" >Cavalo</button>
          </div> 
       </div>
       <div id="card-menu-coelho">
@@ -126,9 +126,9 @@
             <div class="coelho card face mini-icone" ></div>
          </div>
          <div class="confeti-coelho"></div>
-         <button class="opcao errado opcao-porco-2" >Porco</button>
-         <button class="opcao errado opcao-porco-3" >Pato</button>
-         <button class="opcao certo  opcao-porco-1" >Coelho</button>
+         <button class="opcao errado opcao-coelho-2" >Porco</button>
+         <button class="opcao errado opcao-coelho-3" >Pato</button>
+         <button class="opcao certo  opcao-coelho-1" >Coelho</button>
          </div> 
       </div>
       <div id="card-menu-bode">
@@ -138,9 +138,9 @@
             <div class="bode card face mini-icone" ></div>
          </div>
          <div class="confeti-bode"></div>
-         <button class="opcao errado opcao-porco-2" >Vaca</button>
-         <button class="opcao certo  opcao-porco-1" >Bode</button>
-         <button class="opcao errado opcao-porco-3" >Coelho</button>
+         <button class="opcao errado opcao-bode-2" >Vaca</button>
+         <button class="opcao certo  opcao-bode-1" >Bode</button>
+         <button class="opcao errado opcao-bode-3" >Coelho</button>
          </div> 
       </div>
       <div id="card-menu-gato">
@@ -150,9 +150,9 @@
             <div class="gato card face mini-icone" ></div>
          </div>
          <div class="confeti-gato"></div>
-         <button class="opcao certo  opcao-porco-1" >Gato</button>
-         <button class="opcao errado opcao-porco-2" >Bode</button>
-         <button class="opcao errado opcao-porco-3" >Coelho</button>
+         <button class="opcao certo  opcao-gato-1" >Gato</button>
+         <button class="opcao errado opcao-gato-2" >Bode</button>
+         <button class="opcao errado opcao-gato-3" >Coelho</button>
          </div> 
       </div>
       <!-- <div class="linha-1-anima"></div> -->

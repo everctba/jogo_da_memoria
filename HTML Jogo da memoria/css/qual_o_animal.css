@@ -448,13 +448,14 @@ body {
    border: #8a82ee;
    border-style: solid;
    border-width: 2px;
+   position: relative;
 }
 
 .confeti-pato {
-   width: 340px;
-   height: 340px;
+   width: 284px;
+   height: 285px;
    z-index: -1;
-   top: 80px;
+   top: 24px;
    display: none;
    position: absolute;
    /* background-color: #7fffd42e; */
@@ -462,10 +463,10 @@ body {
 }
 
 .confeti-porco {
-   width: 340px;
-   height: 340px;
+   width: 284px;
+   height: 285px;
    z-index: -1;
-   top: 80px;
+   top: 24px;
    display: none;
    position: absolute;
    /* background-color: #7fffd42e; */
@@ -473,10 +474,10 @@ body {
 }
 
 .confeti-frango {
-   width: 340px;
-   height: 340px;
+   width: 284px;
+   height: 285px;
    z-index: -1;
-   top: 80px;
+   top: 24px;
    display: none;
    position: absolute;
    /* background-color: #7fffd42e; */
@@ -484,10 +485,10 @@ body {
 }
 
 .confeti-vaca {
-   width: 340px;
-   height: 340px;
+   width: 284px;
+   height: 285px;
    z-index: -1;
-   top: 80px;
+   top: 24px;
    display: none;
    position: absolute;
    /* background-color: #7fffd42e; */
@@ -495,10 +496,10 @@ body {
 }
 
 .confeti-ovelha {
-   width: 340px;
-   height: 340px;
+   width: 284px;
+   height: 285px;
    z-index: -1;
-   top: 80px;
+   top: 24px;
    display: none;
    position: absolute;
    /* background-color: #7fffd42e; */
@@ -506,10 +507,10 @@ body {
 }
 
 .confeti-cavalo {
-   width: 340px;
-   height: 340px;
+   width: 284px;
+   height: 285px;
    z-index: -1;
-   top: 80px;
+   top: 24px;
    display: none;
    position: absolute;
    /* background-color: #7fffd42e; */
@@ -517,10 +518,10 @@ body {
 }
 
 .confeti-coelho {
-   width: 340px;
-   height: 340px;
+   width: 284px;
+   height: 285px;
    z-index: -1;
-   top: 80px;
+   top: 24px;
    display: none;
    position: absolute;
    /* background-color: #7fffd42e; */
@@ -528,10 +529,10 @@ body {
 }
 
 .confeti-bode {
-   width: 340px;
-   height: 340px;
+   width: 284px;
+   height: 285px;
    z-index: -1;
-   top: 80px;
+   top: 24px;
    display: none;
    position: absolute;
    /* background-color: #7fffd42e; */
@@ -539,10 +540,10 @@ body {
 }
 
 .confeti-gato {
-   width: 340px;
-   height: 340px;
+   width: 284px;
+   height: 285px;
    z-index: -1;
-   top: 80px;
+   top: 24px;
    display: none;
    position: absolute;
    /* background-color: #7fffd42e; */

@@ -1,3 +1,7 @@
+let  audioAcerto = new Audio("../HTML%20Jogo%20da%20memoria/som/acerto.mp3");
+let  audioErro = new Audio("../HTML%20Jogo%20da%20memoria/som/erro.mp3");
+
+
 let pato = document.getElementsByClassName("pato");
 let opcaoPato1 = document.getElementsByClassName("opcao-pato-1");
 let opcaoPato2 = document.getElementsByClassName("opcao-pato-2");
@@ -144,27 +148,32 @@ gato[0].addEventListener('click', abre_menu_gato);
 
 
 opcaoCertaPato = ({ target }) => {
+   audioAcerto.play();
    console.log("Opção certa clicada  = ", opcaoPato1);
    console.log("confeti[0] = ", confetiPato[0]);
    confetiPato[0].style.display = "flex";
    opcaoPato1[0].classList.add("certo-clicado");
+   pato[0].classList.add("resolvido");
    setTimeout(() => {
       card_menu_pato.style.opacity = "0%";  
    } ,150);
    setTimeout(() => {
       card_menu_pato.style.display = "none";   
-   } ,450);
+   } ,650);
 
 }
 opcaoErradaPato1 = ({ target }) => {
+   audioErro.play();
    console.log("Opção ERRADA clicada  = ", opcaoPato2);
    opcaoPato2[0].classList.add("opcao-pos-clique");
    opcaoPato2[0].classList.add("errado-clicado");
    opcaoPato2[0].classList.remove("opcao");
    opcaoPato2[0].classList.remove("errado");
+   
 
 }
 opcaoErradaPato2 = ({ target }) => {
+   audioErro.play();
    console.log("Opção ERRADA clicada  = ", opcaoPato3);
    opcaoPato3[0].classList.add("opcao-pos-clique");
    opcaoPato3[0].classList.add("errado-clicado");
@@ -177,19 +186,21 @@ opcaoErradaPato2 = ({ target }) => {
 
 
 opcaoCertaPorco = ({ target }) => {
+   audioAcerto.play();
    console.log("Opção certa clicada  = ", opcaoPorco1);
    console.log("confeti[0] = ", confetiPorco[0]);
    confetiPorco[0].style.display = "flex";
    opcaoPorco1[0].classList.add("certo-clicado");
-   
+   porco[0].classList.add("resolvido");
    setTimeout(() => {
       card_menu_porco.style.opacity = "0%";  
    } ,150);
    setTimeout(() => {
       card_menu_porco.style.display = "none";   
-   } ,450);
+   } ,650);
 }
 opcaoErradaPorco1 = ({ target }) => {
+   audioErro.play();
    console.log("Opção ERRADA clicada  = ", opcaoPorco2);
    opcaoPorco2[0].classList.add("opcao-pos-clique");
    opcaoPorco2[0].classList.add("errado-clicado");
@@ -198,6 +209,7 @@ opcaoErradaPorco1 = ({ target }) => {
 
 }
 opcaoErradaPorco2 = ({ target }) => {
+   audioErro.play();
    console.log("Opção ERRADA clicada  = ", opcaoPorco3);
    opcaoPorco3[0].classList.add("opcao-pos-clique");
    opcaoPorco3[0].classList.add("errado-clicado");
@@ -209,19 +221,21 @@ opcaoErradaPorco2 = ({ target }) => {
 
 
 opcaoCertaFrango = ({ target }) => {
+   audioAcerto.play();
    console.log("Opção certa clicada  = ", opcaoFrango1);
    console.log("confeti[0] = ", confetiFrango[0]);
    confetiFrango[0].style.display = "flex";
    opcaoFrango1[0].classList.add("certo-clicado");
-   
+   frango[0].classList.add("resolvido");
    setTimeout(() => {
       card_menu_frango.style.opacity = "0%";  
    } ,150);
    setTimeout(() => {
       card_menu_frango.style.display = "none";   
-   } ,450);
+   } ,650);
 }
 opcaoErradaFrango1 = ({ target }) => {
+   audioErro.play();
    console.log("Opção ERRADA clicada  = ", opcaoFrango2);
    opcaoFrango2[0].classList.add("opcao-pos-clique");
    opcaoFrango2[0].classList.add("errado-clicado");
@@ -230,6 +244,7 @@ opcaoErradaFrango1 = ({ target }) => {
 
 }
 opcaoErradaFrango2 = ({ target }) => {
+   audioErro.play();
    console.log("Opção ERRADA clicada  = ", opcaoFrango3);
    opcaoFrango3[0].classList.add("opcao-pos-clique");
    opcaoFrango3[0].classList.add("errado-clicado");
@@ -241,19 +256,21 @@ opcaoErradaFrango2 = ({ target }) => {
 
 
 opcaoCertaVaca = ({ target }) => {
+   audioAcerto.play();
    console.log("Opção certa clicada  = ", opcaoVaca1);
    console.log("confeti[0] = ", confetiVaca[0]);
    confetiVaca[0].style.display = "flex";
    opcaoVaca1[0].classList.add("certo-clicado");
-   
+   vaca[0].classList.add("resolvido");
    setTimeout(() => {
       card_menu_vaca.style.opacity = "0%";  
    } ,150);
    setTimeout(() => {
       card_menu_vaca.style.display = "none";   
-   } ,450);
+   } ,650);
 }
 opcaoErradaVaca1 = ({ target }) => {
+   audioErro.play();
    console.log("Opção ERRADA clicada  = ", opcaoVaca2);
    opcaoVaca2[0].classList.add("opcao-pos-clique");
    opcaoVaca2[0].classList.add("errado-clicado");
@@ -262,6 +279,7 @@ opcaoErradaVaca1 = ({ target }) => {
 
 }
 opcaoErradaVaca2 = ({ target }) => {
+   audioErro.play();
    console.log("Opção ERRADA clicada  = ", opcaoVaca3);
    opcaoVaca3[0].classList.add("opcao-pos-clique");
    opcaoVaca3[0].classList.add("errado-clicado");
@@ -273,19 +291,21 @@ opcaoErradaVaca2 = ({ target }) => {
 
 
 opcaoCertaOvelha= ({ target }) => {
+   audioAcerto.play();
    console.log("Opção certa clicada  = ", opcaoOvelha1);
    console.log("confeti[0] = ", confetiOvelha[0]);
    confetiOvelha[0].style.display = "flex";
    opcaoOvelha1[0].classList.add("certo-clicado");
-   
+   ovelha[0].classList.add("resolvido");
    setTimeout(() => {
       card_menu_ovelha.style.opacity = "0%";  
    } ,150);
    setTimeout(() => {
       card_menu_ovelha.style.display = "none";   
-   } ,450);
+   } ,650);
 }
 opcaoErradaOvelha1 = ({ target }) => {
+   audioErro.play();
    console.log("Opção ERRADA clicada  = ", opcaoOvelha2);
    opcaoOvelha2[0].classList.add("opcao-pos-clique");
    opcaoOvelha2[0].classList.add("errado-clicado");
@@ -294,6 +314,7 @@ opcaoErradaOvelha1 = ({ target }) => {
 
 }
 opcaoErradaOvelha2 = ({ target }) => {
+   audioErro.play();
    console.log("Opção ERRADA clicada  = ", opcaoOvelha3);
    opcaoOvelha3[0].classList.add("opcao-pos-clique");
    opcaoOvelha3[0].classList.add("errado-clicado");
@@ -305,19 +326,21 @@ opcaoErradaOvelha2 = ({ target }) => {
 
 
 opcaoCertaCavalo= ({ target }) => {
+   audioAcerto.play();
    console.log("Opção certa clicada  = ", opcaoCavalo1);
    console.log("confeti[0] = ", confetiCavalo[0]);
    confetiCavalo[0].style.display = "flex";
    opcaoCavalo1[0].classList.add("certo-clicado");
-   
+   cavalo[0].classList.add("resolvido");
    setTimeout(() => {
       card_menu_cavalo.style.opacity = "0%";  
    } ,150);
    setTimeout(() => {
       card_menu_cavalo.style.display = "none";   
-   } ,450);
+   } ,650);
 }
 opcaoErradaCavalo1 = ({ target }) => {
+   audioErro.play();
    console.log("Opção ERRADA clicada  = ", opcaoCavalo2);
    opcaoCavalo2[0].classList.add("opcao-pos-clique");
    opcaoCavalo2[0].classList.add("errado-clicado");
@@ -326,6 +349,7 @@ opcaoErradaCavalo1 = ({ target }) => {
 
 }
 opcaoErradaCavalo2 = ({ target }) => {
+   audioErro.play();
    console.log("Opção ERRADA clicada  = ", opcaoCavalo3);
    opcaoCavalo3[0].classList.add("opcao-pos-clique");
    opcaoCavalo3[0].classList.add("errado-clicado");
@@ -337,19 +361,21 @@ opcaoErradaCavalo2 = ({ target }) => {
 
 
 opcaoCertaCoelho= ({ target }) => {
+   audioAcerto.play();
    console.log("Opção certa clicada  = ", opcaoCoelho1);
    console.log("confeti[0] = ", confetiCoelho[0]);
    confetiCoelho[0].style.display = "flex";
    opcaoCoelho1[0].classList.add("certo-clicado");
-   
+   coelho[0].classList.add("resolvido");
    setTimeout(() => {
-      card_menu_celho.style.opacity = "0%";  
+      card_menu_coelho.style.opacity = "0%";  
    } ,150);
    setTimeout(() => {
       card_menu_coelho.style.display = "none";   
-   } ,450);
+   } ,650);
 }
 opcaoErradaCoelho1 = ({ target }) => {
+   audioErro.play();
    console.log("Opção ERRADA clicada  = ", opcaoCoelho2);
    opcaoCoelho2[0].classList.add("opcao-pos-clique");
    opcaoCoelho2[0].classList.add("errado-clicado");
@@ -358,6 +384,7 @@ opcaoErradaCoelho1 = ({ target }) => {
 
 }
 opcaoErradaCoelho2 = ({ target }) => {
+   audioErro.play();
    console.log("Opção ERRADA clicada  = ", opcaoCoelho3);
    opcaoCoelho3[0].classList.add("opcao-pos-clique");
    opcaoCoelho3[0].classList.add("errado-clicado");
@@ -369,19 +396,21 @@ opcaoErradaCoelho2 = ({ target }) => {
 
 
 opcaoCertaBode= ({ target }) => {
+   audioAcerto.play();
    console.log("Opção certa clicada  = ", opcaoBode1);
    console.log("confeti[0] = ", confetiBode[0]);
    confetiBode[0].style.display = "flex";
    opcaoBode1[0].classList.add("certo-clicado");
-   
+   bode[0].classList.add("resolvido");
    setTimeout(() => {
       card_menu_bode.style.opacity = "0%";  
    } ,150);
    setTimeout(() => {
       card_menu_bode.style.display = "none";   
-   } ,450);
+   } ,650);
 }
 opcaoErradaBode1 = ({ target }) => {
+   audioErro.play();
    console.log("Opção ERRADA clicada  = ", opcaoBode2);
    opcaoBode2[0].classList.add("opcao-pos-clique");
    opcaoBode2[0].classList.add("errado-clicado");
@@ -390,6 +419,7 @@ opcaoErradaBode1 = ({ target }) => {
 
 }
 opcaoErradaBode2 = ({ target }) => {
+   audioErro.play();
    console.log("Opção ERRADA clicada  = ", opcaoBode3);
    opcaoBode3[0].classList.add("opcao-pos-clique");
    opcaoBode3[0].classList.add("errado-clicado");
@@ -401,19 +431,21 @@ opcaoErradaBode2 = ({ target }) => {
 
 
 opcaoCertaGato= ({ target }) => {
+   audioAcerto.play();
    console.log("Opção certa clicada  = ", opcaoGato1);
    console.log("confeti[0] = ", confetiGato[0]);
    confetiGato[0].style.display = "flex";
    opcaoGato1[0].classList.add("certo-clicado");
-   
+   gato[0].classList.add("resolvido");
    setTimeout(() => {
       card_menu_gato.style.opacity = "0%";  
    } ,150);
    setTimeout(() => {
       card_menu_gato.style.display = "none";   
-   } ,450);
+   } ,650);
 }
 opcaoErradaGato1 = ({ target }) => {
+   audioErro.play();
    console.log("Opção ERRADA clicada  = ", opcaoGato2);
    opcaoGato2[0].classList.add("opcao-pos-clique");
    opcaoGato2[0].classList.add("errado-clicado");
@@ -422,6 +454,7 @@ opcaoErradaGato1 = ({ target }) => {
 
 }
 opcaoErradaGato2 = ({ target }) => {
+   audioErro.play();
    console.log("Opção ERRADA clicada  = ", opcaoGato3);
    opcaoGato3[0].classList.add("opcao-pos-clique");
    opcaoGato3[0].classList.add("errado-clicado");
