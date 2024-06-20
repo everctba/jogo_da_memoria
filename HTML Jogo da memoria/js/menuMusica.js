@@ -10,6 +10,7 @@ let pausado = false
 pausaMusica = ({ target }) => {
    console.log("Entro na funçao do clique  = ");
    console.log("pausado  = ", pausado);
+   
    if (pausado===false) {
       console.log("pausado dentro do false  = ", pausado);
       audioMenu.pause();
