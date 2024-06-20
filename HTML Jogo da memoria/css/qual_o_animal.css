@@ -62,7 +62,7 @@ body {
 
 .grid_animal {
    background-color: #1d1e4024;
-
+   border-width: 2px;
    display: grid;
    border-style: dotted;
    position: relative;
@@ -72,10 +72,10 @@ body {
    /* width: 100%;
    max-width: 550px; */
    height: 100%;
-   margin: 20px 5%;
+   /* margin: 20px 5%; */
    justify-content: space-between;
    /* width: 86%; */
-   padding: 32px;
+   padding: 16px;
    border-radius: 40px;
 
 }
@@ -126,7 +126,7 @@ body {
 .tamanho-carta {
 
    aspect-ratio: 1/1;
-   width: 150px;
+   min-width: 75px;
    height: 100%;
    display: flex;
    align-items: center;
@@ -305,8 +305,9 @@ body {
 .texto-centrado {
    display: flex;
    text-align: center;
-   width: 350px;
-   padding: 32px;
+   width: 90%;
+   padding-top: 22px;
+   padding-bottom: 22px;
    background-color: #4647d757;
    border-radius: 32px;
    flex-direction: column;
