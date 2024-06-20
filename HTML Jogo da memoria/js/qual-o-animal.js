@@ -1,0 +1,9 @@
+let pato = document.getElementsByClassName("pato");
+let porco = document.getElementsByClassName("porco");
+let frango = document.getElementsByClassName("frango");
+let vaca = document.getElementsByClassName("vaca");
+let ovelha = document.getElementsByClassName("ovelha");
+let cavalo= document.getElementsByClassName("cavalo");
+let coelho = document.getElementsByClassName("coelhoo");
+let bode = document.getElementsByClassName("bode");
+let gato = document.getElementsByClassName("gato");

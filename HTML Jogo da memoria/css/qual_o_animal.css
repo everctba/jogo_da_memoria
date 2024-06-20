@@ -1,0 +1,333 @@
+.varela-round-regular {
+   /* font-family: "Varela Round", sans-serif; */
+   font-weight: 1000;
+   font-size: 44px;
+   font-style: normal;
+   color: #0075fe;
+   border-width: 4px;
+   border-color: aliceblue;
+   border-radius: 4px;
+   /* -webkit-text-stroke-width: 0.1px; */
+   /* -webkit-text-stroke-color: white; */
+   text-shadow: 5px 4px 10px #000000;
+}
+
+.titulo-jogo-memoria {
+   z-index: 2;
+   display: flex;
+   position: relative;
+   justify-content: center;
+   margin-bottom: 30px;
+   text-align: center;
+   /* -webkit-text-stroke-width: 1.4px; */
+   /* --text-stroke-size: 1px;
+   --text-stroke-color: #fb1a1a; */
+   /* border-color: coral; */
+   line-height: 40px;
+   text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.205);
+   color: #0075FE;
+   -webkit-text-stroke-color: white;
+   transform: rotate(-2deg);
+
+}
+
+.titulo-jogo-memoria-borda {
+   z-index: 1;
+   display: flex;
+   position: absolute;
+   justify-content: center;
+   margin-bottom: 30px;
+   text-align: center;
+   -webkit-text-stroke-width: 9.4px;
+   /* --text-stroke-size: 1px;
+   --text-stroke-color: #fb1a1a; */
+   /* border-color: coral; */
+   line-height: 40px;
+   text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.205);
+   color: #0075FE;
+   -webkit-text-stroke-color: white;
+   transform: rotate(-2deg);
+
+}
+
+.font-com-borda {
+   position: relative;
+   display: flex;
+   justify-content: center;
+}
+
+body {
+   background-color: #5D5FEF;
+}
+
+.grid_animal {
+   background-color: #1d1e4024;
+
+   display: grid;
+   border-style: dotted;
+   position: relative;
+   grid-template-columns: repeat(3, minmax(auto, 1fr));
+   grid-template-rows: repeat(3, minmax(auto, 1fr));
+   gap: 16px;
+   /* width: 100%;
+   max-width: 550px; */
+   height: 100%;
+   margin: 20px 5%;
+   justify-content: space-between;
+   /* width: 86%; */
+   padding: 32px;
+   border-radius: 40px;
+
+}
+
+.card {
+   aspect-ratio: 1/1;
+   width: 25%;
+   /* height: 200px; */
+   /* background-color: #f44646; */
+   border-radius: 22px;
+   box-shadow: 0px 3px 0px 1px #00000017;
+   position: relative;
+   transition: all 400ms ease;
+   transform-style: preserve-3d;
+
+}
+
+
+
+.revela-carta {
+   transform: rotateY(180deg);
+}
+
+.desrevela-carta {
+   transform: rotateY(30deg);
+}
+
+/* 
+.card:hover {
+   transform: rotateY(180deg);
+} */
+
+.face {
+   width: 31%;
+   /* height: auto; */
+   /* position: absolute; */
+
+}
+
+.face:hover {
+
+
+   transform: scale(1.03);
+}
+
+
+
+.tamanho-carta {
+
+   aspect-ratio: 1/1;
+   width: 150px;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: row;
+   flex-wrap: nowrap;
+
+}
+
+
+.frente-carta {
+   background-image: url("../images/jogo_da_memoria/verso.jpg");
+   background-size: cover;
+   background-position: center;
+   backface-visibility: hidden;
+   background-size: 105%;
+}
+
+/* .frente-carta:hover {
+   transform: rotateY(180deg);
+} */
+
+.verso-carta {
+   background-image: url("../images/jogo_da_memoria/abacaxi.jpg");
+   background-size: cover;
+   background-position: center;
+   backface-visibility: hidden;
+}
+
+/* .verso-carta:hover {
+   transform: rotateY(180deg);
+} */
+
+#div_block_fundo {
+   background-color: #195e1d87;
+}
+
+.cartacerta-z-index {
+
+   z-index: 20;
+}
+
+.pato {
+   background-image: url(../images/qual_animal/pato.jpg);
+   background-color: aqua;
+   background-position: center;
+   background-size: cover;
+}
+
+.porco {
+   background-image: url(../images/qual_animal/porco.jpg);
+   background-color: aqua;
+   background-position: center;
+   background-size: cover;
+}
+
+.frango {
+   background-image: url(../images/qual_animal/frango.jpg);
+   background-color: aqua;
+   background-position: center;
+   background-size: cover;
+}
+
+.vaca {
+   background-image: url(../images/qual_animal/vaca.jpg);
+   background-color: aqua;
+   background-position: center;
+   background-size: cover;
+}
+
+.ovelha {
+   background-image: url(../images/qual_animal/ovelha.jpg);
+   background-color: aqua;
+   background-position: center;
+   background-size: cover;
+}
+
+.cavalo {
+   background-image: url(../images/qual_animal/cavalo.jpg);
+   background-color: aqua;
+   background-position: center;
+   background-size: cover;
+}
+
+.coelho {
+   background-image: url(../images/qual_animal/coelho.jpg);
+   background-color: aqua;
+   background-position: center;
+   background-size: cover;
+}
+
+.bode {
+   background-image: url(../images/qual_animal/bode.jpg);
+   background-color: aqua;
+   background-position: center;
+   background-size: cover;
+}
+
+.gato {
+   background-image: url(../images/qual_animal/gato.jpg);
+   background-color: aqua;
+   background-position: center;
+   background-size: cover;
+}
+
+#card-menu-pato {
+   font-size: 32px;
+   z-index: 50;
+   color: aliceblue;
+   display: flex;
+   flex-direction: column;
+   align-content: center;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.805);
+   top: 0;
+   transition: all 400ms ease-in-out;
+   backdrop-filter: blur(8px);
+
+}
+
+#restart {
+   font-weight: 800;
+   font-size: 20px;
+   border: 0;
+   border-radius: 32px;
+   background-color: chocolate;
+   color: #ffffff;
+   padding: 16px;
+   padding-left: 32px;
+   padding-right: 32px;
+   margin-top: 24px;
+   margin-bottom: 165px;
+}
+
+#restart:hover {
+
+   border: 0;
+   border-radius: 32px;
+   background-color: rgb(255, 118, 20);
+   color: #ffffff;
+   padding: 16px;
+   padding-left: 32px;
+   padding-right: 32px;
+   margin-top: 24px;
+   transition: all 400ms ease-in-out;
+   transform: scale(1.05);
+}
+
+#restart:active {
+
+   border: 0;
+   border-radius: 32px;
+   background-color: rgb(255, 220, 22);
+   color: #ffffff;
+   padding: 16px;
+   padding-left: 32px;
+   padding-right: 32px;
+   margin-top: 24px;
+   transition: all 100ms ease;
+   transform: scale(1.05);
+}
+
+.texto-centrado {
+   display: flex;
+   text-align: center;
+   width: 350px;
+   padding: 32px;
+   background-color: #25268457;
+   border-radius: 32px;
+   flex-direction: column;
+   align-items: center;
+}
+
+.quadrado-jogo-da-meoria {
+   width: 420px;
+   height: 420px;
+   z-index: -1;
+   position: absolute;
+   /* background-color: #7fffd42e; */
+   margin-bottom: 105px;
+}
+
+.linha-1-anima {
+   width: 250px;
+   margin-bottom: 15px;
+   /* background-color: blueviolet; */
+   height: 38px;
+}
+
+.casa-voltar-home-animal {
+   display: flex;
+   width: 100%;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+}
+
+.mini-icone {
+   transform: scale(0.8);
+}
