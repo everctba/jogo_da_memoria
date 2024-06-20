@@ -178,3 +178,18 @@
 svg:not(:root) {
    overflow: hidden !important;
 }
+
+#icone-muta {
+   width: 41px;
+   right: -127px;
+   top: -17px;
+   position: absolute;
+}
+
+#icone-muta:hover {
+   transform: scale(1.04);
+}
+
+#muta {
+   position: relative;
+}

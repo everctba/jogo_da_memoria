@@ -19,7 +19,7 @@ var nuvenANIMADA2 = lottie.loadAnimation({
    path:  './js/nuvens-anima2.json'
 });
 nuvenANIMADA2.goToAndPlay(0,true);
-console.log(nuven2);
+// console.log(nuven2);
 
 const botao = document.querySelector('.quadrado');
 // var anim2 = document.querySelector('.linha-1-anima');

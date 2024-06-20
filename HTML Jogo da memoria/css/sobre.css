@@ -144,3 +144,12 @@
 
    /* transform: scale(0.4, 0.4); */
 }
+
+.tamanho-fonte-freepik {
+   font-size: 12px;
+   height: 7px;
+   padding-top: 8px;
+   padding-bottom: 16px;
+   margin-bottom: 32px;
+   line-height: 0px;
+}
