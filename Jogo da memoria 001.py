@@ -13,9 +13,9 @@ contador_de_game_terminado = 0
 contador_lista_match = 0
 #funcção de limpar tela
 def limpa_tela():
-    MOVE_CURSOR_UP = "\033[1A"
-    ERASE = "\x1b[2K"
-    print((MOVE_CURSOR_UP + ERASE)*2,end="")
+    # MOVE_CURSOR_UP = "\033[1A"
+    # ERASE = "\x1b[2K"
+    # print((MOVE_CURSOR_UP + ERASE)*2,end="")
     print('\n'*50)
 #printa matriz na tela  
 def printa_matriz():
@@ -95,11 +95,13 @@ while continuar_jogando:
     menu_instrucoes()
     printa_matriz()
 
+    enter = ''
 
     # MENU DE IMPUT de CARTA
     carta_1 = input("Escolha da PRIMEIRA carta: ")
-    
-    while int(carta_1) > numeros_de_cartas:
+    if (carta_1 == enter):
+        print("vc deu enter tenta denovo")
+    while (carta_1 == enter) or (int(carta_1) > numeros_de_cartas) or (int(carta_1) <= 0) :
         print ('Favor digitar o número de uma das 8 cartas!')
         print ('------------------------')
         carta_1 = input("Escolha PRIMEIRA carta: ")
@@ -115,7 +117,11 @@ while continuar_jogando:
         while carta_1_linguagem == i: 
             # print("Essa carta ja foi virada = ", i) 
             carta_1 = input("Escolha uma PRIMEIRA carta que ainda não foi virada: ")
-            
+            while (carta_1 == enter) or (int(carta_1) > numeros_de_cartas) or (int(carta_1) <= 0):
+                print ('Favor digitar o número de uma das 8 cartas!')
+                print ('------------------------')
+                carta_1 = input("Escolha PRIMEIRA carta: ")
+                
             compara_com_carta_1=carta_1
             carta_1_em_int = int(carta_1)
             carta_1_em_int = carta_1_em_int-1  
@@ -133,8 +139,8 @@ while continuar_jogando:
 
     carta_2 = input("Escolha da SEGUNDA carta: ")
     
-      #tratmento de erro se carta estiver fora do range
-    if int(carta_2) > numeros_de_cartas:
+    #tratmento de erro se carta estiver fora do range
+    while (carta_2 == enter) or (int(carta_2) > numeros_de_cartas) or (int(carta_2) <= 0):
         print ('Favor digitar o número de uma das 8 cartas!')
         print ('------------------------')
         carta_2 = input("Escolha SEGUNDA carta: ")
@@ -159,6 +165,10 @@ while continuar_jogando:
         while carta_2_linguagem == i: 
             # print("Essa carta ja foi virada = ", i) 
             carta_2 = input("Escolha uma SEGUNDA carta que ainda não foi virada: ")
+            while (carta_2 == enter) or (int(carta_2) > numeros_de_cartas) or (int(carta_2) <= 0):
+                print ('Favor digitar o número de uma das 8 cartas!')
+                print ('------------------------')
+                carta_2 = input("Escolha SEGUNDA carta: ")
                 
             compara_com_carta_2=carta_2
             carta_2_em_int = int(carta_2)
@@ -181,7 +191,7 @@ while continuar_jogando:
         
         listas_de_match.append(resultado1)
         contador_lista_match = contador_lista_match+1 
-        print ('listas_de_match = ', listas_de_match)
+        # print ('listas_de_match = ', listas_de_match)
         contador_de_game_terminado = contador_de_game_terminado+1
         #Substitui o numero pelo nome da carta
         matriz[carta_1_em_int]["card"] = matriz[carta_1_em_int]["linguagem"]
