@@ -11,7 +11,7 @@ const Cartas01 = [
    'Cheiro',
    'Fala',
    'Ouço',
-   'Penço',
+   'Penso',
    'Sinto',
    'Vejo'
 ];
